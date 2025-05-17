@@ -11,6 +11,7 @@ public class GameManagerHealthSystem : MonoBehaviour
         public GameObject playerObject;
         public ScriptableHealth playerHealth;
         public Slider healthSlider;
+        public Slider EnergySlider;
     }
 
     public List<PlayerData> players = new List<PlayerData>();
@@ -23,6 +24,10 @@ public class GameManagerHealthSystem : MonoBehaviour
             {
                 player.healthSlider.maxValue = player.playerHealth.maxHealth;
                 player.healthSlider.value = player.playerHealth.currentHealth;
+
+                player.EnergySlider.maxValue = player.playerHealth.specialMoveEnergy;
+                player.playerHealth.currentEnergy = 0;
+                player.EnergySlider.value = 0;
             }
         }
     }
@@ -30,6 +35,7 @@ public class GameManagerHealthSystem : MonoBehaviour
     void Update()
     {
         UpdateHealthSliders();
+        UpdateEnergySliders();
     }
 
     private void UpdateHealthSliders()
@@ -39,6 +45,17 @@ public class GameManagerHealthSystem : MonoBehaviour
             if (player.playerObject.activeSelf && player.healthSlider.value != player.playerHealth.currentHealth)
             {
                 player.healthSlider.value = player.playerHealth.currentHealth;
+            }
+        }
+    }
+
+    private void UpdateEnergySliders()
+    {
+        foreach (var player in players)
+        {
+            if (player.playerObject.activeSelf && player.EnergySlider.value != player.playerHealth.currentEnergy)
+            {
+                player.EnergySlider.value = player.playerHealth.currentEnergy;
             }
         }
     }

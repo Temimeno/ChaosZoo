@@ -20,14 +20,15 @@ public class Player02TakeAction : MonoBehaviour
 
     private Animator anim;
 
-    public enum InputState {None, Down, Forward, Backward, ForwardAgain}
+    public enum InputState { None, Down, Forward, Backward, ForwardAgain }
     public InputState inputState = InputState.None;
     public bool isQCInProgress = false;
     public bool isHCBInProgress = false;
     public float actionCooldown = 0.1f;
     public float lastInputTime;
     public float inputBufferTime = 0.2f;
-    public int specialMoveEnergy = 100;
+    //public int specialMoveEnergy = 100;
+    public ScriptableHealth playerHealth;
     private const float holdThreshold = 0.4f;
     public bool holdbuttonVertical = false;
     public bool holdbuttonHorizontal = false;
@@ -35,6 +36,7 @@ public class Player02TakeAction : MonoBehaviour
     public float holdTimeHorizontal;
     public int inputCount = 0; // ตัวแปรสำหรับนับจำนวนอินพุต
     public bool NumberRPG = false;
+    private float regenRate = 3f;
 
     [Header("Enable/Disable Actions")]
     public List<SpecialMoveToggle> specialMoveToggles = new List<SpecialMoveToggle>()
@@ -52,7 +54,7 @@ public class Player02TakeAction : MonoBehaviour
         new SpecialMoveToggle { moveName = SpecialMove.HCBF_Slash, isEnabled = true },
         new SpecialMoveToggle { moveName = SpecialMove.HCBF_HeavySlash, isEnabled = true },
     };
-    
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -62,6 +64,7 @@ public class Player02TakeAction : MonoBehaviour
 
     void Update()
     {
+        RegenerateEnergy();
         string verticalInput = selectController.Selectjoystick02 ? "LeftAnalogY2" : "Vertical";
         string horizontalInput = selectController.Selectjoystick02 ? "LeftAnalogX2" : "Horizontal";
         bool Joystick = selectController.Selectjoystick02 ? true : false;
@@ -71,35 +74,35 @@ public class Player02TakeAction : MonoBehaviour
         HandleHCB();
         HandleHCBF();
 
-        if(Input.GetAxis(verticalInput) < -0.4f)
+        if (Input.GetAxis(verticalInput) < -0.4f)
         {
             holdTimeVertical += Time.deltaTime;
-            if(holdTimeVertical > 0.2f)
+            if (holdTimeVertical > 0.2f)
             {
                 isQCInProgress = false;
                 isHCBInProgress = false;
                 holdbuttonVertical = true;
             }
         }
-        if(Input.GetAxis(horizontalInput) > 0.4f && player02Movement.faceRight)
+        if (Input.GetAxis(horizontalInput) > 0.4f && player02Movement.faceRight)
         {
             holdTimeHorizontal += Time.deltaTime;
-            if(holdTimeHorizontal > 0.2f)
+            if (holdTimeHorizontal > 0.2f)
             {
                 isQCInProgress = false;
                 isHCBInProgress = false;
                 holdbuttonHorizontal = true;
-            } 
+            }
         }
-        if(Input.GetAxis(horizontalInput) < -0.4f && !player02Movement.faceRight)
+        if (Input.GetAxis(horizontalInput) < -0.4f && !player02Movement.faceRight)
         {
             holdTimeHorizontal += Time.deltaTime;
-            if(holdTimeHorizontal > 0.2f)
+            if (holdTimeHorizontal > 0.2f)
             {
                 isQCInProgress = false;
                 isHCBInProgress = false;
                 holdbuttonHorizontal = true;
-            } 
+            }
         }
         else if (Input.GetAxis(verticalInput) == 0 && Input.GetAxis(horizontalInput) == 0)
         {
@@ -112,7 +115,7 @@ public class Player02TakeAction : MonoBehaviour
 
         if (isPerformingAction || isQCInProgress || isHCBInProgress || player02Movement.isJump) return;
 
-        if(selectController.Selectjoystick02)
+        if (selectController.Selectjoystick02)
         {
             if (Input.GetButtonDown("Player02Joystick01"))
             {
@@ -168,20 +171,20 @@ public class Player02TakeAction : MonoBehaviour
         string horizontalInput = selectController.Selectjoystick02 ? "LeftAnalogX2" : "Horizontal";
         bool Joystick = selectController.Selectjoystick02 ? true : false;
 
-        if(Joystick)
+        if (Joystick)
         {
-            if(-Input.GetAxis(verticalInput) < -0.4f && !holdbuttonVertical && !isQCInProgress)
+            if (-Input.GetAxis(verticalInput) < -0.4f && !holdbuttonVertical && !isQCInProgress)
             {
                 inputState = InputState.Down;
                 lastInputTime = Time.time;
                 isQCInProgress = true;
             }
 
-            else if(inputState == InputState.Down && Time.time - lastInputTime <= inputBufferTime && isQCInProgress)
+            else if (inputState == InputState.Down && Time.time - lastInputTime <= inputBufferTime && isQCInProgress)
             {
-                if(player02Movement.faceRight)
+                if (player02Movement.faceRight)
                 {
-                    if(Input.GetAxis(horizontalInput) > 0.4f)
+                    if (Input.GetAxis(horizontalInput) > 0.4f)
                     {
                         inputState = InputState.Forward;
                         lastInputTime = Time.time;
@@ -189,7 +192,7 @@ public class Player02TakeAction : MonoBehaviour
                 }
                 else
                 {
-                    if(Input.GetAxis(horizontalInput) < -0.4f)
+                    if (Input.GetAxis(horizontalInput) < -0.4f)
                     {
                         inputState = InputState.Forward;
                         lastInputTime = Time.time;
@@ -198,22 +201,22 @@ public class Player02TakeAction : MonoBehaviour
             }
             else if (inputState == InputState.Forward && Time.time - lastInputTime <= inputBufferTime && isQCInProgress)
             {
-                if(Input.GetButtonDown("Player02Joystick01") && specialMoveToggles[0].isEnabled)
+                if (Input.GetButtonDown("Player02Joystick01") && specialMoveToggles[0].isEnabled)
                 {
                     ActionQCF("Punch");
                     Hits = false;
                 }
-                else if(Input.GetButtonDown("Player02Joystick02") && specialMoveToggles[1].isEnabled)
+                else if (Input.GetButtonDown("Player02Joystick02") && specialMoveToggles[1].isEnabled)
                 {
                     ActionQCF("Kick");
                     Hits = false;
                 }
-                else if(Input.GetButtonDown("Player02Joystick03") && specialMoveToggles[2].isEnabled)
+                else if (Input.GetButtonDown("Player02Joystick03") && specialMoveToggles[2].isEnabled)
                 {
                     ActionQCF("Slash");
                     Hits = false;
                 }
-                else if(Input.GetButtonDown("Player02Joystick04") && specialMoveToggles[3].isEnabled)
+                else if (Input.GetButtonDown("Player02Joystick04") && specialMoveToggles[3].isEnabled)
                 {
                     ActionQCF("HeavySlash");
                     Hits = false;
@@ -227,18 +230,18 @@ public class Player02TakeAction : MonoBehaviour
         }
         else
         {
-            if(Input.GetAxis(verticalInput) < -0.4f && !holdbuttonVertical && !isQCInProgress)
+            if (Input.GetAxis(verticalInput) < -0.4f && !holdbuttonVertical && !isQCInProgress)
             {
                 inputState = InputState.Down;
                 lastInputTime = Time.time;
                 isQCInProgress = true;
             }
 
-            else if(inputState == InputState.Down && Time.time - lastInputTime <= inputBufferTime && isQCInProgress)
+            else if (inputState == InputState.Down && Time.time - lastInputTime <= inputBufferTime && isQCInProgress)
             {
-                if(player02Movement.faceRight)
+                if (player02Movement.faceRight)
                 {
-                    if(Input.GetAxis(horizontalInput) > 0.4f)
+                    if (Input.GetAxis(horizontalInput) > 0.4f)
                     {
                         inputState = InputState.Forward;
                         lastInputTime = Time.time;
@@ -246,7 +249,7 @@ public class Player02TakeAction : MonoBehaviour
                 }
                 else
                 {
-                    if(Input.GetAxis(horizontalInput) < -0.4f)
+                    if (Input.GetAxis(horizontalInput) < -0.4f)
                     {
                         inputState = InputState.Forward;
                         lastInputTime = Time.time;
@@ -255,22 +258,22 @@ public class Player02TakeAction : MonoBehaviour
             }
             else if (inputState == InputState.Forward && Time.time - lastInputTime <= inputBufferTime && isQCInProgress)
             {
-                if(Input.GetButtonDown("Player02Bt01") && specialMoveToggles[0].isEnabled)
+                if (Input.GetButtonDown("Player02Bt01") && specialMoveToggles[0].isEnabled)
                 {
                     ActionQCF("Punch");
                     Hits = false;
                 }
-                else if(Input.GetButtonDown("Player02Bt02") && specialMoveToggles[1].isEnabled)
+                else if (Input.GetButtonDown("Player02Bt02") && specialMoveToggles[1].isEnabled)
                 {
                     ActionQCF("Kick");
                     Hits = false;
                 }
-                else if(Input.GetButtonDown("Player02Bt03") && specialMoveToggles[2].isEnabled)
+                else if (Input.GetButtonDown("Player02Bt03") && specialMoveToggles[2].isEnabled)
                 {
                     ActionQCF("Slash");
                     Hits = false;
                 }
-                else if(Input.GetButtonDown("Player02Bt04") && specialMoveToggles[3].isEnabled)
+                else if (Input.GetButtonDown("Player02Bt04") && specialMoveToggles[3].isEnabled)
                 {
                     ActionQCF("HeavySlash");
                     Hits = false;
@@ -284,27 +287,27 @@ public class Player02TakeAction : MonoBehaviour
         }
     }
     private void HandleQCB()
-    {   
-        if(isPerformingAction || isHCBInProgress) return;
-        
+    {
+        if (isPerformingAction || isHCBInProgress) return;
+
         string verticalInput = selectController.Selectjoystick02 ? "LeftAnalogY2" : "Vertical";
         string horizontalInput = selectController.Selectjoystick02 ? "LeftAnalogX2" : "Horizontal";
         bool Joystick = selectController.Selectjoystick02 ? true : false;
 
 
-        if(Joystick)
+        if (Joystick)
         {
-            if(-Input.GetAxis(verticalInput) < -0.4f && !holdbuttonVertical && !isQCInProgress)
+            if (-Input.GetAxis(verticalInput) < -0.4f && !holdbuttonVertical && !isQCInProgress)
             {
                 inputState = InputState.Down;
                 lastInputTime = Time.time;
                 isQCInProgress = true;
             }
-            else if(inputState == InputState.Down && Time.time - lastInputTime <= inputBufferTime && isQCInProgress)
+            else if (inputState == InputState.Down && Time.time - lastInputTime <= inputBufferTime && isQCInProgress)
             {
-                if(player02Movement.faceRight)
+                if (player02Movement.faceRight)
                 {
-                    if(Input.GetAxis(horizontalInput) < -0.4f)
+                    if (Input.GetAxis(horizontalInput) < -0.4f)
                     {
                         inputState = InputState.Backward;
                         lastInputTime = Time.time;
@@ -312,7 +315,7 @@ public class Player02TakeAction : MonoBehaviour
                 }
                 else
                 {
-                    if(Input.GetAxis(horizontalInput) > 0.4f)
+                    if (Input.GetAxis(horizontalInput) > 0.4f)
                     {
                         inputState = InputState.Backward;
                         lastInputTime = Time.time;
@@ -321,22 +324,22 @@ public class Player02TakeAction : MonoBehaviour
             }
             else if (inputState == InputState.Backward && Time.time - lastInputTime <= inputBufferTime && isQCInProgress)
             {
-                if(Input.GetButtonDown("Player02Joystick01") && specialMoveToggles[4].isEnabled)
+                if (Input.GetButtonDown("Player02Joystick01") && specialMoveToggles[4].isEnabled)
                 {
                     ActionQCB("Punch");
                     Hits = false;
                 }
-                else if(Input.GetButtonDown("Player02Joystick02") && specialMoveToggles[5].isEnabled)
+                else if (Input.GetButtonDown("Player02Joystick02") && specialMoveToggles[5].isEnabled)
                 {
                     ActionQCB("Kick");
                     Hits = false;
                 }
-                else if(Input.GetButtonDown("Player02Joystick03") && specialMoveToggles[6].isEnabled)
+                else if (Input.GetButtonDown("Player02Joystick03") && specialMoveToggles[6].isEnabled)
                 {
                     ActionQCB("Slash");
                     Hits = false;
                 }
-                else if(Input.GetButtonDown("Player02Joystick04") && specialMoveToggles[7].isEnabled)
+                else if (Input.GetButtonDown("Player02Joystick04") && specialMoveToggles[7].isEnabled)
                 {
                     ActionQCB("HeavySlash");
                     Hits = false;
@@ -350,17 +353,17 @@ public class Player02TakeAction : MonoBehaviour
         }
         else
         {
-            if(Input.GetAxis(verticalInput) < -0.4f && !holdbuttonVertical && !isQCInProgress)
+            if (Input.GetAxis(verticalInput) < -0.4f && !holdbuttonVertical && !isQCInProgress)
             {
                 inputState = InputState.Down;
                 lastInputTime = Time.time;
                 isQCInProgress = true;
             }
-            else if(inputState == InputState.Down && Time.time - lastInputTime <= inputBufferTime && isQCInProgress)
+            else if (inputState == InputState.Down && Time.time - lastInputTime <= inputBufferTime && isQCInProgress)
             {
-                if(player02Movement.faceRight)
+                if (player02Movement.faceRight)
                 {
-                    if(Input.GetAxis(horizontalInput) < -0.4f)
+                    if (Input.GetAxis(horizontalInput) < -0.4f)
                     {
                         inputState = InputState.Backward;
                         lastInputTime = Time.time;
@@ -368,7 +371,7 @@ public class Player02TakeAction : MonoBehaviour
                 }
                 else
                 {
-                    if(Input.GetAxis(horizontalInput) > 0.4f)
+                    if (Input.GetAxis(horizontalInput) > 0.4f)
                     {
                         inputState = InputState.Backward;
                         lastInputTime = Time.time;
@@ -377,22 +380,22 @@ public class Player02TakeAction : MonoBehaviour
             }
             else if (inputState == InputState.Backward && Time.time - lastInputTime <= inputBufferTime && isQCInProgress)
             {
-                if(Input.GetButtonDown("Player02Bt01") && specialMoveToggles[4].isEnabled)
+                if (Input.GetButtonDown("Player02Bt01") && specialMoveToggles[4].isEnabled)
                 {
                     ActionQCB("Punch");
                     Hits = false;
                 }
-                else if(Input.GetButtonDown("Player02Bt02") && specialMoveToggles[5].isEnabled)
+                else if (Input.GetButtonDown("Player02Bt02") && specialMoveToggles[5].isEnabled)
                 {
                     ActionQCB("Kick");
                     Hits = false;
                 }
-                else if(Input.GetButtonDown("Player02Bt03") && specialMoveToggles[6].isEnabled)
+                else if (Input.GetButtonDown("Player02Bt03") && specialMoveToggles[6].isEnabled)
                 {
                     ActionQCB("Slash");
                     Hits = false;
                 }
-                else if(Input.GetButtonDown("Player02Bt04") && specialMoveToggles[7].isEnabled)
+                else if (Input.GetButtonDown("Player02Bt04") && specialMoveToggles[7].isEnabled)
                 {
                     ActionQCB("HeavySlash");
                     Hits = false;
@@ -407,7 +410,7 @@ public class Player02TakeAction : MonoBehaviour
     }
     private void HandleHCB()
     {
-        if(isQCInProgress)
+        if (isQCInProgress)
         {
             return;
         }
@@ -417,11 +420,11 @@ public class Player02TakeAction : MonoBehaviour
         bool Joystick = selectController.Selectjoystick02 ? true : false;
 
 
-        if(inputState == InputState.None || inputState == InputState.ForwardAgain && !isHCBInProgress)
+        if (inputState == InputState.None || inputState == InputState.ForwardAgain && !isHCBInProgress)
         {
-            if(player02Movement.faceRight)
+            if (player02Movement.faceRight)
             {
-                if(Input.GetAxis(horizontalInput) > 0.4f && !holdbuttonHorizontal)
+                if (Input.GetAxis(horizontalInput) > 0.4f && !holdbuttonHorizontal)
                 {
                     inputState = InputState.Forward;
                     lastInputTime = Time.time;
@@ -431,7 +434,7 @@ public class Player02TakeAction : MonoBehaviour
             }
             else
             {
-                if(Input.GetAxis(horizontalInput) < -0.4f && !holdbuttonHorizontal)
+                if (Input.GetAxis(horizontalInput) < -0.4f && !holdbuttonHorizontal)
                 {
                     inputState = InputState.Forward;
                     lastInputTime = Time.time;
@@ -440,11 +443,11 @@ public class Player02TakeAction : MonoBehaviour
                 }
             }
         }
-        if(inputState == InputState.Forward && Time.time - lastInputTime <= inputBufferTime && isHCBInProgress)
+        if (inputState == InputState.Forward && Time.time - lastInputTime <= inputBufferTime && isHCBInProgress)
         {
-            if(Joystick)
+            if (Joystick)
             {
-                if(-Input.GetAxis(verticalInput) < -0.4f && !holdbuttonVertical)
+                if (-Input.GetAxis(verticalInput) < -0.4f && !holdbuttonVertical)
                 {
                     inputState = InputState.Down;
                     lastInputTime = Time.time;
@@ -454,7 +457,7 @@ public class Player02TakeAction : MonoBehaviour
             }
             else
             {
-                if(Input.GetAxis(verticalInput) < -0.4f && !holdbuttonVertical)
+                if (Input.GetAxis(verticalInput) < -0.4f && !holdbuttonVertical)
                 {
                     inputState = InputState.Down;
                     lastInputTime = Time.time;
@@ -463,11 +466,11 @@ public class Player02TakeAction : MonoBehaviour
                 }
             }
         }
-        if(inputState == InputState.Down && Time.time - lastInputTime <= inputBufferTime && isHCBInProgress)
+        if (inputState == InputState.Down && Time.time - lastInputTime <= inputBufferTime && isHCBInProgress)
         {
-            if(player02Movement.faceRight)
+            if (player02Movement.faceRight)
             {
-                if(Input.GetAxis(horizontalInput) < -0.4f)
+                if (Input.GetAxis(horizontalInput) < -0.4f)
                 {
                     inputState = InputState.Backward;
                     lastInputTime = Time.time;
@@ -477,7 +480,7 @@ public class Player02TakeAction : MonoBehaviour
             }
             else
             {
-                if(Input.GetAxis(horizontalInput) > 0.4f)
+                if (Input.GetAxis(horizontalInput) > 0.4f)
                 {
                     inputState = InputState.Backward;
                     lastInputTime = Time.time;
@@ -486,77 +489,77 @@ public class Player02TakeAction : MonoBehaviour
                 }
             }
         }
-        if(inputState == InputState.Backward && Time.time - lastInputTime <= inputBufferTime && isHCBInProgress)
+        if (inputState == InputState.Backward && Time.time - lastInputTime <= inputBufferTime && isHCBInProgress)
         {
-            if(Joystick)
+            if (Joystick)
             {
-                if(Input.GetButtonDown("Player02Joystick01") && specialMoveToggles[8].isEnabled)
+                if (Input.GetButtonDown("Player02Joystick01") && specialMoveToggles[8].isEnabled)
                 {
                     ActionHCB("Punch");
                     Hits = false;
                     return;
                 }
-                else if(Input.GetButtonDown("Player02Joystick02") && specialMoveToggles[9].isEnabled)
+                else if (Input.GetButtonDown("Player02Joystick02") && specialMoveToggles[9].isEnabled)
                 {
                     ActionHCB("Kick");
                     Hits = false;
                     return;
                 }
-                else if(Input.GetButtonDown("Player02Joystick03") && specialMoveToggles[10].isEnabled)
-                {
-                   ActionHCB("Slash");
-                   Hits = false;
-                    return;
-                }
-                else if(Input.GetButtonDown("Player02Joystick04") && specialMoveToggles[11].isEnabled)
-                {
-                    ActionHCB("HeavySlash");
-                    Hits = false;
-                    return;
-                }
-            }
-            else
-            {
-                if(Input.GetButtonDown("Player02Bt01") && specialMoveToggles[8].isEnabled)
-                {
-                    ActionHCB("Punch");
-                    Hits = false;
-                    return;
-                }
-                else if(Input.GetButtonDown("Player02Bt02") && specialMoveToggles[9].isEnabled)
-                {
-                    ActionHCB("Kick");
-                    Hits = false;
-                    return;
-                }
-                else if(Input.GetButtonDown("Player02Bt03") && specialMoveToggles[10].isEnabled)
+                else if (Input.GetButtonDown("Player02Joystick03") && specialMoveToggles[10].isEnabled)
                 {
                     ActionHCB("Slash");
                     Hits = false;
                     return;
                 }
-                else if(Input.GetButtonDown("Player02Bt04") && specialMoveToggles[11].isEnabled)
+                else if (Input.GetButtonDown("Player02Joystick04") && specialMoveToggles[11].isEnabled)
                 {
                     ActionHCB("HeavySlash");
                     Hits = false;
                     return;
                 }
             }
-         }
+            else
+            {
+                if (Input.GetButtonDown("Player02Bt01") && specialMoveToggles[8].isEnabled)
+                {
+                    ActionHCB("Punch");
+                    Hits = false;
+                    return;
+                }
+                else if (Input.GetButtonDown("Player02Bt02") && specialMoveToggles[9].isEnabled)
+                {
+                    ActionHCB("Kick");
+                    Hits = false;
+                    return;
+                }
+                else if (Input.GetButtonDown("Player02Bt03") && specialMoveToggles[10].isEnabled)
+                {
+                    ActionHCB("Slash");
+                    Hits = false;
+                    return;
+                }
+                else if (Input.GetButtonDown("Player02Bt04") && specialMoveToggles[11].isEnabled)
+                {
+                    ActionHCB("HeavySlash");
+                    Hits = false;
+                    return;
+                }
+            }
+        }
         if (Time.time - lastInputTime > inputBufferTime)
         {
             inputState = InputState.None;
             isHCBInProgress = false;
-        }  
+        }
     }
 
     private void HandleHCBF()
     {
-        if(isQCInProgress)
+        if (isQCInProgress)
         {
             return;
         }
-        if (specialMoveEnergy < 50)
+        if (playerHealth.currentEnergy < 50)
         {
             return;
         }
@@ -565,11 +568,11 @@ public class Player02TakeAction : MonoBehaviour
         string horizontalInput = selectController.Selectjoystick02 ? "LeftAnalogX2" : "Horizontal";
         bool Joystick = selectController.Selectjoystick02 ? true : false;
 
-        if(inputState == InputState.None || inputState == InputState.ForwardAgain && !isHCBInProgress)
+        if (inputState == InputState.None || inputState == InputState.ForwardAgain && !isHCBInProgress)
         {
-            if(player02Movement.faceRight)
+            if (player02Movement.faceRight)
             {
-                if(Input.GetAxis(horizontalInput) > 0.4f && !holdbuttonHorizontal)
+                if (Input.GetAxis(horizontalInput) > 0.4f && !holdbuttonHorizontal)
                 {
                     inputState = InputState.Forward;
                     lastInputTime = Time.time;
@@ -579,7 +582,7 @@ public class Player02TakeAction : MonoBehaviour
             }
             else
             {
-                if(Input.GetAxis(horizontalInput) < -0.4f && !holdbuttonHorizontal)
+                if (Input.GetAxis(horizontalInput) < -0.4f && !holdbuttonHorizontal)
                 {
                     inputState = InputState.Forward;
                     lastInputTime = Time.time;
@@ -588,11 +591,11 @@ public class Player02TakeAction : MonoBehaviour
                 }
             }
         }
-        if(inputState == InputState.Forward && Time.time - lastInputTime <= inputBufferTime && isHCBInProgress)
+        if (inputState == InputState.Forward && Time.time - lastInputTime <= inputBufferTime && isHCBInProgress)
         {
-            if(Joystick)
+            if (Joystick)
             {
-                if(-Input.GetAxis(verticalInput) < -0.4f && !holdbuttonVertical)
+                if (-Input.GetAxis(verticalInput) < -0.4f && !holdbuttonVertical)
                 {
                     inputState = InputState.Down;
                     lastInputTime = Time.time;
@@ -602,7 +605,7 @@ public class Player02TakeAction : MonoBehaviour
             }
             else
             {
-                if(Input.GetAxis(verticalInput) < -0.4f && !holdbuttonVertical)
+                if (Input.GetAxis(verticalInput) < -0.4f && !holdbuttonVertical)
                 {
                     inputState = InputState.Down;
                     lastInputTime = Time.time;
@@ -611,11 +614,11 @@ public class Player02TakeAction : MonoBehaviour
                 }
             }
         }
-        if(inputState == InputState.Down && Time.time - lastInputTime <= inputBufferTime && isHCBInProgress)
+        if (inputState == InputState.Down && Time.time - lastInputTime <= inputBufferTime && isHCBInProgress)
         {
-            if(player02Movement.faceRight)
+            if (player02Movement.faceRight)
             {
-                if(Input.GetAxis(horizontalInput) < -0.4f)
+                if (Input.GetAxis(horizontalInput) < -0.4f)
                 {
                     inputState = InputState.Backward;
                     lastInputTime = Time.time;
@@ -625,7 +628,7 @@ public class Player02TakeAction : MonoBehaviour
             }
             else
             {
-                if(Input.GetAxis(horizontalInput) > 0.4f)
+                if (Input.GetAxis(horizontalInput) > 0.4f)
                 {
                     inputState = InputState.Backward;
                     lastInputTime = Time.time;
@@ -633,11 +636,11 @@ public class Player02TakeAction : MonoBehaviour
                 }
             }
         }
-        if(inputState == InputState.Backward && Time.time - lastInputTime <= inputBufferTime && isHCBInProgress)
+        if (inputState == InputState.Backward && Time.time - lastInputTime <= inputBufferTime && isHCBInProgress)
         {
-            if(player02Movement.faceRight)
+            if (player02Movement.faceRight)
             {
-                if(Input.GetAxis(horizontalInput) > 0.4f && !holdbuttonHorizontal)
+                if (Input.GetAxis(horizontalInput) > 0.4f && !holdbuttonHorizontal)
                 {
                     inputState = InputState.ForwardAgain;
                     lastInputTime = Time.time;
@@ -647,7 +650,7 @@ public class Player02TakeAction : MonoBehaviour
             }
             else
             {
-                if(Input.GetAxis(horizontalInput) < -0.4f && !holdbuttonHorizontal)
+                if (Input.GetAxis(horizontalInput) < -0.4f && !holdbuttonHorizontal)
                 {
                     inputState = InputState.ForwardAgain;
                     lastInputTime = Time.time;
@@ -655,29 +658,29 @@ public class Player02TakeAction : MonoBehaviour
                 }
             }
         }
-        if(inputState == InputState.ForwardAgain && Time.time - lastInputTime <= inputBufferTime && isHCBInProgress)
+        if (inputState == InputState.ForwardAgain && Time.time - lastInputTime <= inputBufferTime && isHCBInProgress)
         {
-            if(Joystick)
+            if (Joystick)
             {
-                if(Input.GetButtonDown("Player02Joystick01") && specialMoveToggles[12].isEnabled)
+                if (Input.GetButtonDown("Player02Joystick01") && specialMoveToggles[12].isEnabled)
                 {
                     ActionHCBF("Punch");
                     Hits = false;
                     return;
                 }
-                else if(Input.GetButtonDown("Player02Joystick02") && specialMoveToggles[13].isEnabled)
+                else if (Input.GetButtonDown("Player02Joystick02") && specialMoveToggles[13].isEnabled)
                 {
                     ActionHCBF("Kick");
                     Hits = false;
                     return;
                 }
-                else if(Input.GetButtonDown("Player02Joystick03") && specialMoveToggles[14].isEnabled)
+                else if (Input.GetButtonDown("Player02Joystick03") && specialMoveToggles[14].isEnabled)
                 {
                     ActionHCBF("Slash");
                     Hits = false;
                     return;
                 }
-                else if(Input.GetButtonDown("Player02Joystick04") && specialMoveToggles[15].isEnabled)
+                else if (Input.GetButtonDown("Player02Joystick04") && specialMoveToggles[15].isEnabled)
                 {
                     ActionHCBF("HeavySlash");
                     Hits = false;
@@ -686,25 +689,25 @@ public class Player02TakeAction : MonoBehaviour
             }
             else
             {
-                if(Input.GetButtonDown("Player02Bt01") && specialMoveToggles[12].isEnabled)
+                if (Input.GetButtonDown("Player02Bt01") && specialMoveToggles[12].isEnabled)
                 {
                     ActionHCBF("Punch");
                     Hits = false;
                     return;
                 }
-                else if(Input.GetButtonDown("Player02Bt02") && specialMoveToggles[13].isEnabled)
+                else if (Input.GetButtonDown("Player02Bt02") && specialMoveToggles[13].isEnabled)
                 {
                     ActionHCBF("Kick");
                     Hits = false;
                     return;
                 }
-                else if(Input.GetButtonDown("Player02Bt03") && specialMoveToggles[14].isEnabled)
+                else if (Input.GetButtonDown("Player02Bt03") && specialMoveToggles[14].isEnabled)
                 {
                     ActionHCBF("Slash");
                     Hits = false;
                     return;
                 }
-                else if(Input.GetButtonDown("Player02Bt04") && specialMoveToggles[15].isEnabled)
+                else if (Input.GetButtonDown("Player02Bt04") && specialMoveToggles[15].isEnabled)
                 {
                     ActionHCBF("HeavySlash");
                     Hits = false;
@@ -721,7 +724,7 @@ public class Player02TakeAction : MonoBehaviour
     }
 
     private void PerformAction(string actionName)
-    {   
+    {
         isPerformingAction = true;
         player02Movement.isPerformingAction = true;
 
@@ -729,9 +732,9 @@ public class Player02TakeAction : MonoBehaviour
         string horizontalInput = selectController.Selectjoystick02 ? "LeftAnalogX2" : "Horizontal";
         bool Joystick = selectController.Selectjoystick02 ? true : false;
 
-        if(Joystick)
+        if (Joystick)
         {
-             if (-Input.GetAxis(verticalInput) < -0.4f)
+            if (-Input.GetAxis(verticalInput) < -0.4f)
             {
                 anim.SetTrigger("Crouch" + actionName + "Trigger");
             }
@@ -795,7 +798,7 @@ public class Player02TakeAction : MonoBehaviour
     private void ActionQCF(string actionName)
     {
         anim.SetTrigger("QCF_" + actionName);
-        if(nameCharacter == "Pengang")
+        if (nameCharacter == "Pengang")
         {
             boxColliderPangeng.enabled = false;
             StartCoroutine(ResetBoxCollider(1f));
@@ -808,13 +811,13 @@ public class Player02TakeAction : MonoBehaviour
     private void ActionQCB(string actionName)
     {
         anim.SetTrigger("QCB_" + actionName);
-        if(nameCharacter == "Pengang")
+        if (nameCharacter == "Pengang")
         {
             boxColliderPangeng.enabled = false;
             StartCoroutine(ResetBoxCollider(1f));
         }
         isPerformingAction = true;
-        player02Movement.isPerformingAction = true; 
+        player02Movement.isPerformingAction = true;
         StartCoroutine(ResetQCState());
     }
     private void ActionHCB(string actionName)
@@ -827,11 +830,11 @@ public class Player02TakeAction : MonoBehaviour
     }
     private void ActionHCBF(string actionName)
     {
-        specialMoveEnergy -= 50;
+        playerHealth.currentEnergy -= 50;
         isPerformingAction = true;
         player02Movement.isPerformingAction = true;
-        anim.SetTrigger("HCBF_"+ actionName);
-        if(nameCharacter == "Shark")
+        anim.SetTrigger("HCBF_" + actionName);
+        if (nameCharacter == "Shark")
         {
             player02CameraSpecial.CameraSetActive();
             player02Health.SharkDrive = true;
@@ -845,7 +848,7 @@ public class Player02TakeAction : MonoBehaviour
             StartCoroutine(ResetHCBFState(1f));
             StartCoroutine(ResetBoolSharkdrive());
         }
-        if(nameCharacter == "Pengang")
+        if (nameCharacter == "Pengang")
         {
             player02CameraSpecial.SpecialPengang();
             NumberRPG = true;
@@ -861,7 +864,7 @@ public class Player02TakeAction : MonoBehaviour
             StartCoroutine(ResetBoxCollider(3.2f));
             StartCoroutine(ResetHCBFState(5f));
         }
-        
+
     }
 
     IEnumerator ResetIsPerformingAction(float delay)
@@ -949,6 +952,14 @@ public class Player02TakeAction : MonoBehaviour
         {
             opponentAnimator.enabled = true;
             player01Movement.enabled = true;
+        }
+    }
+    private void RegenerateEnergy()
+    {
+        if (playerHealth.currentEnergy < 100)
+        {
+            playerHealth.currentEnergy += regenRate * Time.deltaTime;
+            playerHealth.currentEnergy = Mathf.Min(playerHealth.currentEnergy, 100); // ไม่ให้เกิน 100
         }
     }
 }

@@ -9,5 +9,9 @@ public class ScriptableHealth : ScriptableObject
     [Header("Health Settings")]
     public int maxHealth = 100;
     public int currentHealth;
+
+    [Header("Stamina Setting")]
+    public float specialMoveEnergy = 100;
+    public float currentEnergy;
     
 }
