@@ -4347,7 +4347,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &235794196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37075,7 +37075,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1661756491
 Transform:
   m_ObjectHideFlags: 0
@@ -45611,6 +45611,7 @@ GameObject:
   - component: {fileID: 1934042306}
   - component: {fileID: 1934042308}
   - component: {fileID: 1934042309}
+  - component: {fileID: 1934042310}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -45725,6 +45726,29 @@ MonoBehaviour:
   player02Health: {fileID: 0}
   textInGameOver: {fileID: 1719144025}
   textWinRound: {fileID: 2136989283}
+--- !u!114 &1934042310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934042305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7d687080089d649a0720df223e2a0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Character:
+  - {fileID: 235794195}
+  - {fileID: 59890153}
+  - {fileID: 377594579}
+  - {fileID: 818986248}
+  - {fileID: 917601033}
+  - {fileID: 2059565156}
+  - {fileID: 1299951463}
+  - {fileID: 1661756490}
+  selectCharacter: {fileID: 0}
+  gameManagerHealthSystem: {fileID: 1934042309}
 --- !u!1 &1937673239
 GameObject:
   m_ObjectHideFlags: 0

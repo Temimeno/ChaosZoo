@@ -37,7 +37,7 @@ public class GameManagerHealthSystem : MonoBehaviour
 
     private bool hasRoundEnded = false; // ✅ เพิ่ม flag
 
-    void Start()
+    public void SetUpEverything()
     {
         //activePlayersHealth.Clear();
         CounterWinPlayer01 = 0;

@@ -35,7 +35,7 @@ public class SelectController : MonoBehaviour
     void Update()
     {
         // สลับการควบคุมระหว่างคีย์บอร์ดและจอยสติ๊ก
-        if (Input.GetKeyDown(KeyCode.F1))
+        /*if (Input.GetKeyDown(KeyCode.F1))
         {
             SelectKeyBoard01 = true;
             Selectjoystick01 = false;
@@ -58,6 +58,6 @@ public class SelectController : MonoBehaviour
             SelectKeyBoard02 = false;
             Selectjoystick02 = true;
             Debug.Log("Switched to Joystick control player02");
-        }
+        }*/
     }
 }

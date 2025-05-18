@@ -62,6 +62,7 @@ TagManager:
   - 2P_AttackBox
   - Left
   - Right
+  - SelectCharacter
   layers:
   - Default
   - TransparentFX

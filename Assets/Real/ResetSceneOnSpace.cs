@@ -6,7 +6,7 @@ public class ResetSceneOnSpace : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.F9))
         {
             // โหลดซีนปัจจุบันอีกครั้ง
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

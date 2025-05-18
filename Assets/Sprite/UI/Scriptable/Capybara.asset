@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6385623936289343b327d9afd5c6ca4, type: 3}
+  m_Name: Capybara
+  m_EditorClassIdentifier: 
+  id: 2
+  name: Capybara
+  icon: {fileID: 21300000, guid: 01662224325432244975de9384830804, type: 3}
+  showCharacterLeft: {fileID: 21300000, guid: 01662224325432244975de9384830804, type: 3}
+  showCharacterRight: {fileID: 21300000, guid: 76723e62511ad7a478ab42712ea1fb3d, type: 3}
