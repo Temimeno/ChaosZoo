@@ -14,7 +14,7 @@ public class Player01Health : MonoBehaviour
     public Player01Movement player01Movement;
     public Player01TakeAction player01TakeAction;
     public Player01TakeActionMultibutton player01TakeActionMultibutton;
-    public Player01EventAnimation player01EventAnimation;
+    public Player01EvenetAnimatiionVersus player01EventAnimation;
     //public Slider hpMainSlider;
     //public Slider hpEaseSlider;
     //private float lerpSpeed = 0.05f;
