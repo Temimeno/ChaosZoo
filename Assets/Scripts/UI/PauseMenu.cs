@@ -78,12 +78,26 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         capyMove.SetActive(true);
+        kenMove.SetActive(false);
+
+        pengangMoveKB.SetActive(false);
+        pengangMoveJS.SetActive(false);
+        
+        sharkMoveKB.SetActive(false);
+        sharkMoveJS.SetActive(false);
     }
 
     public void KenMove()
     {
         pauseMenuUI.SetActive(false);
         kenMove.SetActive(true);
+        capyMove.SetActive(false);
+
+        pengangMoveKB.SetActive(false);
+        pengangMoveJS.SetActive(false);
+        
+        sharkMoveKB.SetActive(false);
+        sharkMoveJS.SetActive(false);
     }
 
     // Switch Move List UI
@@ -92,24 +106,48 @@ public class PauseMenu : MonoBehaviour
     {
         sharkMoveKB.SetActive(false);
         sharkMoveJS.SetActive(true);
+
+        pengangMoveKB.SetActive(false);
+        pengangMoveJS.SetActive(false);
+
+        capyMove.SetActive(false);
+        kenMove.SetActive(false);
     }
 
     public void ToSharkKB()
     {
         sharkMoveKB.SetActive(true);
         sharkMoveJS.SetActive(false);
+
+        pengangMoveKB.SetActive(false);
+        pengangMoveJS.SetActive(false);
+
+        capyMove.SetActive(false);
+        kenMove.SetActive(false);
     }
 
     public void ToPengangJS()
     {
         pengangMoveKB.SetActive(false);
         pengangMoveJS.SetActive(true);
+
+        sharkMoveKB.SetActive(false);
+        sharkMoveJS.SetActive(false);
+
+        capyMove.SetActive(false);
+        kenMove.SetActive(false);
     }
 
     public void ToPengangKB()
     {
         pengangMoveKB.SetActive(true);
         pengangMoveJS.SetActive(false);
+
+        sharkMoveKB.SetActive(false);
+        sharkMoveJS.SetActive(false);
+
+        capyMove.SetActive(false);
+        kenMove.SetActive(false);
     }
 
     // Video Handle
