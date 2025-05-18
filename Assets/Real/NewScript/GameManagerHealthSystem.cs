@@ -19,6 +19,7 @@ public class GameManagerHealthSystem : MonoBehaviour
 
     public List<float> activePlayersHealth = new List<float>();
     public GameObject gameOverPanel;
+    public GameObject paneltowin;
     public Transform positionPlayer01;
     public Transform positionPlayer02;
     public int CounterWinPlayer01;
@@ -33,6 +34,8 @@ public class GameManagerHealthSystem : MonoBehaviour
     public Player02Health player02Health;
 
     public TextMeshProUGUI textInGameOver;
+    public TextMeshProUGUI textWinRound;
+
     private bool hasRoundEnded = false; // ✅ เพิ่ม flag
 
     void Start()
@@ -124,7 +127,7 @@ public class GameManagerHealthSystem : MonoBehaviour
             {
                 ObjectCouter01[CounterWinPlayer01 - 1].SetActive(true);
             }
-
+            textWinRound.text = "Player 01 win";
             CheckForWinner();
         }
         else if (player2Health > player1Health && player1Health == 0)
@@ -137,7 +140,7 @@ public class GameManagerHealthSystem : MonoBehaviour
             {
                 ObjectCouter02[CounterWinPlayer02 - 1].SetActive(true);
             }
-
+            textWinRound.text = "Player 01 win";
             CheckForWinner();
         }
     }
@@ -161,7 +164,11 @@ public class GameManagerHealthSystem : MonoBehaviour
 
     IEnumerator ResetPositionCharacter()
     {
+        yield return new WaitForSeconds(1f);
+        paneltowin.SetActive(true);
+
         yield return new WaitForSeconds(2f);
+        paneltowin.SetActive(false);
 
         // รีเซ็ตตำแหน่ง
         player01.transform.position = positionPlayer01.position;
