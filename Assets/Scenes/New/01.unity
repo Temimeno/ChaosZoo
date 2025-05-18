@@ -422,7 +422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 26776429}
   - component: {fileID: 26776431}
-  - component: {fileID: 26776430}
+  - component: {fileID: 26776432}
   m_Layer: 0
   m_Name: 2LKRKAttackBox
   m_TagString: 2LKRK_AttackBox
@@ -445,30 +445,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1791426316}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &26776430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 26776428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 26776431}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 0
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &26776431
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -490,6 +466,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020615233, y: 0.0036139155, z: 0.008580467}
   m_Center: {x: 0.0013118783, y: 0.0005796213, z: 0.00016224325}
+--- !u!114 &26776432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26776428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 26776431}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1923691838}
+  player01CameraSpecial: {fileID: 1923691840}
 --- !u!4 &33657856 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8926591292944341325, guid: 5d0a9f8673a266e4da8a2b5558256126,
@@ -506,7 +506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 39779653}
   - component: {fileID: 39779655}
-  - component: {fileID: 39779654}
+  - component: {fileID: 39779656}
   m_Layer: 0
   m_Name: 6RPLPRKLKAttackBox_LP
   m_TagString: 6LPRPLKRK_AttackBox
@@ -529,30 +529,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1894659874}
   m_LocalEulerAnglesHint: {x: -5.21, y: -16.087, z: -14.148}
---- !u!114 &39779654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 39779652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 39779655}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &39779655
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -574,6 +550,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &39779656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39779652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 39779655}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1 &42870221
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,7 +622,7 @@ GameObject:
   m_Component:
   - component: {fileID: 56385957}
   - component: {fileID: 56385959}
-  - component: {fileID: 56385958}
+  - component: {fileID: 56385960}
   m_Layer: 0
   m_Name: 2RPAttackBox
   m_TagString: 2RP_AttackBox
@@ -645,30 +645,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1500350686}
   m_LocalEulerAnglesHint: {x: -79.345, y: -313.778, z: 136.663}
---- !u!114 &56385958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56385956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 56385959}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &56385959
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -690,6 +666,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13, y: 0.1, z: 0.07}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &56385960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56385956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 56385959}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1923691838}
+  player01CameraSpecial: {fileID: 1923691840}
 --- !u!1 &56490681
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,7 +790,7 @@ Transform:
   m_GameObject: {fileID: 59890153}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.060803086, y: 0.030976385, z: -0.31823826}
+  m_LocalPosition: {x: -0.202, y: 0.0601, z: -0.479}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -918,7 +918,7 @@ GameObject:
   m_Component:
   - component: {fileID: 70329431}
   - component: {fileID: 70329433}
-  - component: {fileID: 70329432}
+  - component: {fileID: 70329434}
   m_Layer: 0
   m_Name: 5RPLPLKAttackBox_LK
   m_TagString: 5RKLK_AttackBox
@@ -941,30 +941,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2041727332}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.06}
---- !u!114 &70329432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70329430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 70329433}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &70329433
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -986,6 +962,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.017735071, y: 0.006259872, z: 0.011055247}
   m_Center: {x: -0.0019810349, y: 0.0015857465, z: -0.0028249759}
+--- !u!114 &70329434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70329430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 70329433}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1 &72203853
 GameObject:
   m_ObjectHideFlags: 0
@@ -2400,7 +2400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 175983787}
   - component: {fileID: 175983789}
-  - component: {fileID: 175983788}
+  - component: {fileID: 175983790}
   m_Layer: 0
   m_Name: 4RPLKAttackBox
   m_TagString: Untagged
@@ -2423,30 +2423,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2041727332}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.06}
---- !u!114 &175983788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 175983786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 175983789}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &175983789
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2468,6 +2444,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.017735071, y: 0.006259872, z: 0.011055247}
   m_Center: {x: -0.0019810349, y: 0.0015857465, z: -0.0028249759}
+--- !u!114 &175983790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175983786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 175983789}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1 &182000208
 GameObject:
   m_ObjectHideFlags: 0
@@ -2868,7 +2868,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 200673312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 200673315}
@@ -2881,8 +2881,8 @@ MonoBehaviour:
   animationName: 6LPRPLKRP_Capybara
   player02Health: {fileID: 0}
   player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1923691838}
+  player01CameraSpecial: {fileID: 1923691840}
 --- !u!1 &207577307
 GameObject:
   m_ObjectHideFlags: 0
@@ -2971,7 +2971,7 @@ GameObject:
   m_Component:
   - component: {fileID: 210983564}
   - component: {fileID: 210983566}
-  - component: {fileID: 210983565}
+  - component: {fileID: 210983567}
   m_Layer: 0
   m_Name: 1RPRKLKAttackBox_LK
   m_TagString: Untagged
@@ -2994,30 +2994,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2041727332}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.06}
---- !u!114 &210983565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210983563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 210983566}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &210983566
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3039,6 +3015,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.017735071, y: 0.006259872, z: 0.011055247}
   m_Center: {x: -0.0019810349, y: 0.0015857465, z: -0.0028249759}
+--- !u!114 &210983567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210983563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 210983566}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1 &211668282
 GameObject:
   m_ObjectHideFlags: 0
@@ -3407,7 +3407,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &235794196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4265,7 +4265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 285824485}
   - component: {fileID: 285824487}
-  - component: {fileID: 285824486}
+  - component: {fileID: 285824488}
   m_Layer: 0
   m_Name: 2RPAttackBox
   m_TagString: 2RP_AttackBox
@@ -4288,30 +4288,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1879662490}
   m_LocalEulerAnglesHint: {x: -184.785, y: -21.470001, z: 9.837997}
---- !u!114 &285824486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 285824484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 285824487}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &285824487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4333,6 +4309,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &285824488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285824484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 285824487}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!4 &296936762 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3818341080566662289, guid: 330747d8608b3774c994bdc0fa8dd1b3,
@@ -4477,7 +4477,7 @@ GameObject:
   - component: {fileID: 311186120}
   - component: {fileID: 311186123}
   - component: {fileID: 311186122}
-  - component: {fileID: 311186121}
+  - component: {fileID: 311186124}
   m_Layer: 14
   m_Name: 2PAttackBox
   m_TagString: 2P_AttackBox
@@ -4500,30 +4500,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1012605536}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &311186121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 311186119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 311186122}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 1
-  TakeActionMultiButton: 0
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &311186122
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4553,6 +4529,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311186119}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &311186124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311186119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 311186122}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 1
+  TakeActionMultiButton: 0
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 1012605538}
+  player01TakeActionMultibutton: {fileID: 0}
+  player01CameraSpecial: {fileID: 1012605542}
 --- !u!1 &321200383
 GameObject:
   m_ObjectHideFlags: 0
@@ -5842,7 +5842,7 @@ GameObject:
   - component: {fileID: 335042405}
   - component: {fileID: 335042408}
   - component: {fileID: 335042407}
-  - component: {fileID: 335042406}
+  - component: {fileID: 335042409}
   m_Layer: 14
   m_Name: Cube
   m_TagString: 5P_AttackBox
@@ -5865,30 +5865,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1012605535}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &335042406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 335042404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 335042407}
-  damage: 10
-  force: 0
-  Check: 1
-  Grab: 0
-  TakeAction: 1
-  TakeActionMultiButton: 0
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &335042407
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5918,6 +5894,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 335042404}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &335042409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335042404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 335042407}
+  damage: 10
+  force: 0
+  Check: 1
+  Grab: 0
+  TakeAction: 1
+  TakeActionMultiButton: 0
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 1012605538}
+  player01TakeActionMultibutton: {fileID: 0}
+  player01CameraSpecial: {fileID: 1012605542}
 --- !u!1 &336084514
 GameObject:
   m_ObjectHideFlags: 0
@@ -6009,7 +6009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 338059383}
   - component: {fileID: 338059385}
-  - component: {fileID: 338059384}
+  - component: {fileID: 338059386}
   m_Layer: 0
   m_Name: 5RPAttackBox
   m_TagString: 5RP_AttackBox
@@ -6032,30 +6032,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1879662490}
   m_LocalEulerAnglesHint: {x: -179.581, y: -21.429993, z: -0.44400024}
---- !u!114 &338059384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 338059382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 338059385}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &338059385
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6077,6 +6053,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.15493494, z: 1}
   m_Center: {x: 0.0000023565917, y: -0.42253315, z: 0.0000015830143}
+--- !u!114 &338059386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338059382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 338059385}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1001 &340006474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6322,7 +6322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 349797655}
   - component: {fileID: 349797657}
-  - component: {fileID: 349797656}
+  - component: {fileID: 349797658}
   m_Layer: 0
   m_Name: 5LPRKAttackBox_LP
   m_TagString: 5LP_AttackBox
@@ -6345,30 +6345,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1894659874}
   m_LocalEulerAnglesHint: {x: -5.21, y: -16.087, z: -14.148}
---- !u!114 &349797656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 349797654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 349797657}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &349797657
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6390,6 +6366,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &349797658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349797654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 349797657}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1 &349995054
 GameObject:
   m_ObjectHideFlags: 0
@@ -8162,7 +8162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 370880342}
   - component: {fileID: 370880344}
-  - component: {fileID: 370880343}
+  - component: {fileID: 370880345}
   m_Layer: 0
   m_Name: 4RPAttackBox
   m_TagString: 4RP_AttackBox
@@ -8185,30 +8185,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1500350686}
   m_LocalEulerAnglesHint: {x: -79.345, y: -313.778, z: 136.663}
---- !u!114 &370880343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 370880341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 370880344}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &370880344
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8230,6 +8206,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13, y: 0.1, z: 0.07}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &370880345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370880341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 370880344}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1923691838}
+  player01CameraSpecial: {fileID: 1923691840}
 --- !u!1 &377594579
 GameObject:
   m_ObjectHideFlags: 0
@@ -8342,7 +8342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 384213315}
   - component: {fileID: 384213317}
-  - component: {fileID: 384213316}
+  - component: {fileID: 384213318}
   m_Layer: 0
   m_Name: 6RKLKAttackBox
   m_TagString: 6LKRK_AttackBox
@@ -8365,30 +8365,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1879662490}
   m_LocalEulerAnglesHint: {x: -192.858, y: -21.533997, z: -0.4550171}
---- !u!114 &384213316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 384213314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 384213317}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &384213317
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8410,6 +8386,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.65379703, y: 0.63837135, z: 1}
   m_Center: {x: -0.17309915, y: -0.18081488, z: 0.00000068533745}
+--- !u!114 &384213318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384213314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 384213317}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1 &394223653
 GameObject:
   m_ObjectHideFlags: 0
@@ -9297,7 +9297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 469251165}
   - component: {fileID: 469251167}
-  - component: {fileID: 469251166}
+  - component: {fileID: 469251168}
   m_Layer: 0
   m_Name: 6RPLPRKLKAttackBox_RP
   m_TagString: Untagged
@@ -9320,30 +9320,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1879662490}
   m_LocalEulerAnglesHint: {x: -179.581, y: -21.429993, z: -0.44400024}
---- !u!114 &469251166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 469251164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 469251167}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &469251167
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9365,6 +9341,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.15493494, z: 1}
   m_Center: {x: 0.0000023565917, y: -0.42253315, z: 0.0000015830143}
+--- !u!114 &469251168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469251164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 469251167}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1001 &473701768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9709,7 +9709,7 @@ GameObject:
   - component: {fileID: 538636533}
   - component: {fileID: 538636536}
   - component: {fileID: 538636535}
-  - component: {fileID: 538636534}
+  - component: {fileID: 538636537}
   m_Layer: 14
   m_Name: 2HSAttackBox
   m_TagString: 2HS_AttackBox
@@ -9732,30 +9732,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1679077583}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &538636534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538636532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 538636535}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 1
-  TakeActionMultiButton: 0
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!136 &538636535
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9787,6 +9763,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 538636532}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &538636537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538636532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 538636535}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 1
+  TakeActionMultiButton: 0
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 1012605538}
+  player01TakeActionMultibutton: {fileID: 0}
+  player01CameraSpecial: {fileID: 1012605542}
 --- !u!1 &551791095
 GameObject:
   m_ObjectHideFlags: 0
@@ -9884,7 +9884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 554807549}
   - component: {fileID: 554807551}
-  - component: {fileID: 554807550}
+  - component: {fileID: 554807552}
   m_Layer: 0
   m_Name: 5RPLPLKAttackBox_LP
   m_TagString: 5RPLPLK_AttackBox
@@ -9907,30 +9907,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1894659874}
   m_LocalEulerAnglesHint: {x: -5.21, y: -16.087, z: -14.148}
---- !u!114 &554807550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554807548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 554807551}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &554807551
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9952,6 +9928,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &554807552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554807548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 554807551}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1 &565574207
 GameObject:
   m_ObjectHideFlags: 0
@@ -10321,7 +10321,7 @@ GameObject:
   - component: {fileID: 599967138}
   - component: {fileID: 599967141}
   - component: {fileID: 599967140}
-  - component: {fileID: 599967139}
+  - component: {fileID: 599967142}
   m_Layer: 14
   m_Name: 6KAttackBox
   m_TagString: 6K_AttackBox
@@ -10344,30 +10344,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1012605533}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &599967139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 599967137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 599967140}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 1
-  TakeActionMultiButton: 0
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &599967140
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10397,6 +10373,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599967137}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &599967142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599967137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 599967140}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 1
+  TakeActionMultiButton: 0
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 1012605538}
+  player01TakeActionMultibutton: {fileID: 0}
+  player01CameraSpecial: {fileID: 1012605542}
 --- !u!1 &601506473
 GameObject:
   m_ObjectHideFlags: 0
@@ -10407,7 +10407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 601506474}
   - component: {fileID: 601506476}
-  - component: {fileID: 601506475}
+  - component: {fileID: 601506477}
   m_Layer: 0
   m_Name: 5RKLKAttackBox_LK
   m_TagString: 5RKLK_AttackBox
@@ -10430,30 +10430,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2041727332}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.06}
---- !u!114 &601506475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 601506473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 601506476}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &601506476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10475,6 +10451,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.017735071, y: 0.006259872, z: 0.011055247}
   m_Center: {x: -0.0019810349, y: 0.0015857465, z: -0.0028249759}
+--- !u!114 &601506477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601506473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 601506476}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!4 &603389333 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5731573519906924337, guid: 28e06609e400e424288d35e9bd0e4b3d,
@@ -10580,7 +10580,7 @@ GameObject:
   - component: {fileID: 632979241}
   - component: {fileID: 632979244}
   - component: {fileID: 632979243}
-  - component: {fileID: 632979242}
+  - component: {fileID: 632979245}
   m_Layer: 14
   m_Name: 5HSAttackBox
   m_TagString: 5HS_AttackBox
@@ -10603,30 +10603,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1012605534}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &632979242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632979240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 632979243}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 1
-  TakeActionMultiButton: 0
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &632979243
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10656,6 +10632,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632979240}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &632979245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632979240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 632979243}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 1
+  TakeActionMultiButton: 0
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 1012605538}
+  player01TakeActionMultibutton: {fileID: 0}
+  player01CameraSpecial: {fileID: 1012605542}
 --- !u!1 &634630586
 GameObject:
   m_ObjectHideFlags: 0
@@ -12168,7 +12168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 775084768}
   - component: {fileID: 775084770}
-  - component: {fileID: 775084769}
+  - component: {fileID: 775084771}
   m_Layer: 0
   m_Name: 4RPLPRKLKAttackBox
   m_TagString: 4RPLPRKLK_AttackBox
@@ -12191,30 +12191,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 922647088}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &775084769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775084767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 775084770}
-  damage: 50
-  force: 0
-  Check: 0
-  Grab: 1
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 4RPLPRKLK_Ken
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &775084770
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12236,6 +12212,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &775084771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775084767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 775084770}
+  damage: 50
+  force: 0
+  Check: 0
+  Grab: 1
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 4RPLPRKLK_Ken
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1001 &785968111
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13117,7 +13117,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &818986249
 Transform:
   m_ObjectHideFlags: 0
@@ -13127,7 +13127,7 @@ Transform:
   m_GameObject: {fileID: 818986248}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.19535857, y: -0.0467, z: -0.476859}
+  m_LocalPosition: {x: -0.19535857, y: -0.0262, z: -0.476859}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13299,7 +13299,7 @@ GameObject:
   - component: {fileID: 823034259}
   - component: {fileID: 823034262}
   - component: {fileID: 823034261}
-  - component: {fileID: 823034260}
+  - component: {fileID: 823034263}
   m_Layer: 14
   m_Name: 5PAttackBox
   m_TagString: 5P_AttackBox
@@ -13322,30 +13322,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1012605535}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &823034260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 823034258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 823034261}
-  damage: 10
-  force: 0
-  Check: 1
-  Grab: 0
-  TakeAction: 1
-  TakeActionMultiButton: 0
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &823034261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13375,6 +13351,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823034258}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &823034263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823034258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 823034261}
+  damage: 10
+  force: 0
+  Check: 1
+  Grab: 0
+  TakeAction: 1
+  TakeActionMultiButton: 0
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 1012605538}
+  player01TakeActionMultibutton: {fileID: 0}
+  player01CameraSpecial: {fileID: 1012605542}
 --- !u!1 &823587759
 GameObject:
   m_ObjectHideFlags: 0
@@ -15928,7 +15928,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 948899483}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 948899486}
@@ -15940,9 +15940,9 @@ MonoBehaviour:
   TakeActionMultiButton: 0
   animationName: 
   player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
+  player01TakeAction: {fileID: 1012605538}
   player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
+  player01CameraSpecial: {fileID: 1012605542}
 --- !u!1 &969338833
 GameObject:
   m_ObjectHideFlags: 0
@@ -16075,7 +16075,7 @@ GameObject:
   m_Component:
   - component: {fileID: 982199014}
   - component: {fileID: 982199016}
-  - component: {fileID: 982199015}
+  - component: {fileID: 982199017}
   m_Layer: 0
   m_Name: 2LPAttackBox
   m_TagString: 2LP_AttackBox
@@ -16098,30 +16098,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1894659874}
   m_LocalEulerAnglesHint: {x: -5.21, y: -16.087, z: -14.148}
---- !u!114 &982199015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982199013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 982199016}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &982199016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16143,6 +16119,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &982199017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982199013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 982199016}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1 &998856005 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5d0a9f8673a266e4da8a2b5558256126,
@@ -21005,7 +21005,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1025071133}
   - component: {fileID: 1025071135}
-  - component: {fileID: 1025071134}
+  - component: {fileID: 1025071136}
   m_Layer: 0
   m_Name: 5LPAttackBox
   m_TagString: 5LP_AttackBox
@@ -21028,30 +21028,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1894659874}
   m_LocalEulerAnglesHint: {x: -5.21, y: -16.087, z: -14.148}
---- !u!114 &1025071134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025071132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1025071135}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1025071135
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21073,6 +21049,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1025071136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025071132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1025071135}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1 &1028139907
 GameObject:
   m_ObjectHideFlags: 0
@@ -21345,7 +21345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1049170879}
   - component: {fileID: 1049170881}
-  - component: {fileID: 1049170880}
+  - component: {fileID: 1049170882}
   m_Layer: 0
   m_Name: 3RPAttackBox
   m_TagString: 3RP_AttackBox
@@ -21368,30 +21368,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1500350686}
   m_LocalEulerAnglesHint: {x: -79.345, y: -313.778, z: 136.663}
---- !u!114 &1049170880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049170878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1049170881}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1049170881
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21413,6 +21389,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13, y: 0.1, z: 0.07}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1049170882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049170878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1049170881}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1923691838}
+  player01CameraSpecial: {fileID: 1923691840}
 --- !u!1 &1059152767
 GameObject:
   m_ObjectHideFlags: 0
@@ -21423,7 +21423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1059152768}
   - component: {fileID: 1059152770}
-  - component: {fileID: 1059152769}
+  - component: {fileID: 1059152771}
   m_Layer: 0
   m_Name: 6LPRPLKRKAttackBox_RP
   m_TagString: 6LPRPLKRK_AttackBox
@@ -21446,30 +21446,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1500350686}
   m_LocalEulerAnglesHint: {x: -75.683, y: -359.818, z: 171.368}
---- !u!114 &1059152769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059152767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1059152770}
-  damage: 5
-  force: 0
-  Check: 0
-  Grab: 1
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 6LPRPLKRP_Capybara
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1059152770
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21491,6 +21467,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13, y: 0.1, z: 0.07}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1059152771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059152767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1059152770}
+  damage: 5
+  force: 0
+  Check: 0
+  Grab: 1
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 6LPRPLKRP_Capybara
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1923691838}
+  player01CameraSpecial: {fileID: 1923691840}
 --- !u!1 &1061929196
 GameObject:
   m_ObjectHideFlags: 0
@@ -21707,7 +21707,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1073951068}
   - component: {fileID: 1073951070}
-  - component: {fileID: 1073951069}
+  - component: {fileID: 1073951071}
   m_Layer: 0
   m_Name: 5RPLPLKAttackBox_RP
   m_TagString: Untagged
@@ -21730,30 +21730,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1879662490}
   m_LocalEulerAnglesHint: {x: -179.581, y: -21.429993, z: -0.44400024}
---- !u!114 &1073951069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1073951067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1073951070}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1073951070
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21775,6 +21751,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.15493494, z: 1}
   m_Center: {x: 0.0000023565917, y: -0.42253315, z: 0.0000015830143}
+--- !u!114 &1073951071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073951067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1073951070}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1 &1075094064
 GameObject:
   m_ObjectHideFlags: 0
@@ -22058,7 +22058,7 @@ GameObject:
   - component: {fileID: 1101138918}
   - component: {fileID: 1101138921}
   - component: {fileID: 1101138920}
-  - component: {fileID: 1101138919}
+  - component: {fileID: 1101138922}
   m_Layer: 14
   m_Name: 6SAttackBox
   m_TagString: 6S_AttackBox
@@ -22081,30 +22081,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1012605536}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1101138919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1101138917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1101138920}
-  damage: 10
-  force: 1.5
-  Check: 0
-  Grab: 0
-  TakeAction: 1
-  TakeActionMultiButton: 0
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1101138920
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22134,6 +22110,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1101138917}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1101138922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101138917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1101138920}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 1
+  TakeActionMultiButton: 0
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 1012605538}
+  player01TakeActionMultibutton: {fileID: 0}
+  player01CameraSpecial: {fileID: 1012605542}
 --- !u!1 &1103082498
 GameObject:
   m_ObjectHideFlags: 0
@@ -22259,7 +22259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1119925125}
   - component: {fileID: 1119925127}
-  - component: {fileID: 1119925126}
+  - component: {fileID: 1119925128}
   m_Layer: 0
   m_Name: 1LPRKLKAttackBox
   m_TagString: 1LPRKLK_AttackBox
@@ -22282,30 +22282,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 922647088}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1119925126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1119925124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1119925127}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1119925127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22327,6 +22303,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1119925128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119925124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1119925127}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1 &1126428472
 GameObject:
   m_ObjectHideFlags: 0
@@ -22654,7 +22654,7 @@ GameObject:
   - component: {fileID: 1223770545}
   - component: {fileID: 1223770548}
   - component: {fileID: 1223770547}
-  - component: {fileID: 1223770546}
+  - component: {fileID: 1223770549}
   m_Layer: 14
   m_Name: 6HSAttackBox
   m_TagString: 6HS_AttackBox
@@ -22677,30 +22677,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1012605533}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1223770546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1223770544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1223770547}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 1
-  TakeActionMultiButton: 0
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1223770547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22730,6 +22706,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223770544}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1223770549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223770544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1223770547}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 1
+  TakeActionMultiButton: 0
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 1012605538}
+  player01TakeActionMultibutton: {fileID: 0}
+  player01CameraSpecial: {fileID: 1012605542}
 --- !u!1 &1226943613
 GameObject:
   m_ObjectHideFlags: 0
@@ -22818,7 +22818,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1229024213}
   - component: {fileID: 1229024215}
-  - component: {fileID: 1229024214}
+  - component: {fileID: 1229024216}
   m_Layer: 0
   m_Name: 6RPAttackBox
   m_TagString: Untagged
@@ -22841,30 +22841,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1879662490}
   m_LocalEulerAnglesHint: {x: -179.581, y: -21.429993, z: -0.44400024}
---- !u!114 &1229024214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1229024212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1229024215}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1229024215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22886,6 +22862,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.15493494, z: 1}
   m_Center: {x: 0.0000023565917, y: -0.42253315, z: 0.0000015830143}
+--- !u!114 &1229024216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229024212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1229024215}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1 &1230267001
 GameObject:
   m_ObjectHideFlags: 0
@@ -22983,7 +22983,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1231702765}
   - component: {fileID: 1231702767}
-  - component: {fileID: 1231702766}
+  - component: {fileID: 1231702768}
   m_Layer: 0
   m_Name: 632146SAttacKBox
   m_TagString: 632146S_AttackBox
@@ -23006,30 +23006,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 402516672}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1231702766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1231702764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1231702767}
-  damage: 50
-  force: 2
-  Check: 0
-  Grab: 1
-  TakeAction: 1
-  TakeActionMultiButton: 0
-  animationName: 632146S_Shark
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 1012605542}
 --- !u!65 &1231702767
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23051,6 +23027,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1231702768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231702764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1231702767}
+  damage: 50
+  force: 2
+  Check: 0
+  Grab: 1
+  TakeAction: 1
+  TakeActionMultiButton: 0
+  animationName: 632146S_Shark
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 1012605538}
+  player01TakeActionMultibutton: {fileID: 0}
+  player01CameraSpecial: {fileID: 1012605542}
 --- !u!1 &1233521598
 GameObject:
   m_ObjectHideFlags: 0
@@ -23138,6 +23138,82 @@ MonoBehaviour:
   player02TakeAction: {fileID: 187303738}
   player02TakeActionMultibutton: {fileID: 187303744}
   player02CameraSpecial: {fileID: 0}
+--- !u!1 &1234468013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1234468014}
+  - component: {fileID: 1234468016}
+  - component: {fileID: 1234468015}
+  m_Layer: 5
+  m_Name: PanelShowWin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1234468014
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234468013}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.63759, y: 0.63759, z: 0.63759}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2136989282}
+  m_Father: {fileID: 1366147171}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1234468015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234468013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.44705883}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1234468016
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234468013}
+  m_CullTransparentMesh: 1
 --- !u!1 &1235501138
 GameObject:
   m_ObjectHideFlags: 0
@@ -23351,7 +23427,7 @@ GameObject:
   - component: {fileID: 1290132567}
   - component: {fileID: 1290132570}
   - component: {fileID: 1290132569}
-  - component: {fileID: 1290132568}
+  - component: {fileID: 1290132571}
   m_Layer: 14
   m_Name: 236HSAttackBox
   m_TagString: 236HS_AttackBox
@@ -23374,30 +23450,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1012605534}
   m_LocalEulerAnglesHint: {x: -7.062, y: 2.444, z: -19.145}
---- !u!114 &1290132568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290132566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1290132569}
-  damage: 20
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 1
-  TakeActionMultiButton: 0
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1290132569
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23427,6 +23479,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290132566}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1290132571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290132566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1290132569}
+  damage: 20
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 1
+  TakeActionMultiButton: 0
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 1012605538}
+  player01TakeActionMultibutton: {fileID: 0}
+  player01CameraSpecial: {fileID: 1012605542}
 --- !u!1 &1290415865
 GameObject:
   m_ObjectHideFlags: 0
@@ -24153,7 +24229,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1360650288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 1360650290}
@@ -24166,8 +24242,8 @@ MonoBehaviour:
   animationName: 
   player02Health: {fileID: 0}
   player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1 &1362980907
 GameObject:
   m_ObjectHideFlags: 0
@@ -24345,6 +24421,7 @@ RectTransform:
   - {fileID: 1360465089}
   - {fileID: 197893377}
   - {fileID: 82790266}
+  - {fileID: 1234468014}
   - {fileID: 735376665}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -28691,7 +28768,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1406638996}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 1406638999}
@@ -28704,8 +28781,8 @@ MonoBehaviour:
   animationName: 
   player02Health: {fileID: 0}
   player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1923691838}
+  player01CameraSpecial: {fileID: 1923691840}
 --- !u!1 &1420467966
 GameObject:
   m_ObjectHideFlags: 0
@@ -28716,7 +28793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1420467967}
   - component: {fileID: 1420467969}
-  - component: {fileID: 1420467968}
+  - component: {fileID: 1420467970}
   m_Layer: 0
   m_Name: 63214PAttacKBox
   m_TagString: 63214P_AttackBox
@@ -28739,30 +28816,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 402516672}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1420467968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1420467966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1420467969}
-  damage: 10
-  force: 2
-  Check: 0
-  Grab: 1
-  TakeAction: 1
-  TakeActionMultiButton: 0
-  animationName: 63214P_Shark
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 1012605542}
 --- !u!65 &1420467969
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28784,6 +28837,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1420467970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420467966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1420467969}
+  damage: 30
+  force: 2
+  Check: 0
+  Grab: 1
+  TakeAction: 1
+  TakeActionMultiButton: 0
+  animationName: 63214P_Shark
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 1012605538}
+  player01TakeActionMultibutton: {fileID: 0}
+  player01CameraSpecial: {fileID: 1012605542}
 --- !u!4 &1421366628 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1573104154704751926, guid: 330747d8608b3774c994bdc0fa8dd1b3,
@@ -28801,7 +28878,7 @@ GameObject:
   - component: {fileID: 1425691454}
   - component: {fileID: 1425691457}
   - component: {fileID: 1425691456}
-  - component: {fileID: 1425691455}
+  - component: {fileID: 1425691458}
   m_Layer: 14
   m_Name: 5SAttackBox
   m_TagString: 5S_AttackBox
@@ -28824,30 +28901,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1012605535}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1425691455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425691453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1425691456}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 0
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1425691456
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28877,6 +28930,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425691453}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1425691458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425691453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1425691456}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 0
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 1012605538}
+  player01TakeActionMultibutton: {fileID: 0}
+  player01CameraSpecial: {fileID: 1012605542}
 --- !u!1 &1428167079
 GameObject:
   m_ObjectHideFlags: 0
@@ -28975,7 +29052,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1430560414}
   - component: {fileID: 1430560416}
-  - component: {fileID: 1430560415}
+  - component: {fileID: 1430560417}
   m_Layer: 0
   m_Name: 5LPRKAttackBox
   m_TagString: Untagged
@@ -28998,30 +29075,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296544313}
   m_LocalEulerAnglesHint: {x: 5.587, y: 0, z: 0}
---- !u!114 &1430560415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1430560413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1430560416}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1430560416
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29043,6 +29096,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.016025072, y: 0.0062598726, z: 0.010160307}
   m_Center: {x: -0.0011260258, y: 0.0015857614, z: 0.000059126458}
+--- !u!114 &1430560417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430560413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1430560416}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1 &1444466127
 GameObject:
   m_ObjectHideFlags: 0
@@ -29169,7 +29246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1465365783}
   - component: {fileID: 1465365785}
-  - component: {fileID: 1465365784}
+  - component: {fileID: 1465365786}
   m_Layer: 0
   m_Name: 4RPLKAttackBox_RP
   m_TagString: 4RPLK_AttackBox
@@ -29192,30 +29269,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1879662490}
   m_LocalEulerAnglesHint: {x: -184.785, y: -21.470001, z: 9.837997}
---- !u!114 &1465365784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1465365782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1465365785}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1465365785
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29237,6 +29290,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1465365786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465365782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1465365785}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1 &1466905020
 GameObject:
   m_ObjectHideFlags: 0
@@ -29408,7 +29485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1475804520}
   - component: {fileID: 1475804522}
-  - component: {fileID: 1475804521}
+  - component: {fileID: 1475804523}
   m_Layer: 0
   m_Name: 5RKAttackBox
   m_TagString: 5RK_AttackBox
@@ -29431,30 +29508,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296544313}
   m_LocalEulerAnglesHint: {x: 5.587, y: 0, z: 0}
---- !u!114 &1475804521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475804519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1475804522}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1475804522
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29476,6 +29529,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.016025072, y: 0.0062598726, z: 0.010160307}
   m_Center: {x: -0.0011260258, y: 0.0015857614, z: 0.000059126458}
+--- !u!114 &1475804523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475804519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1475804522}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1 &1475812826
 GameObject:
   m_ObjectHideFlags: 0
@@ -29641,7 +29718,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1485706756}
   - component: {fileID: 1485706758}
-  - component: {fileID: 1485706757}
+  - component: {fileID: 1485706759}
   m_Layer: 0
   m_Name: 4LPRPAttackBox_RP
   m_TagString: Untagged
@@ -29664,30 +29741,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1500350686}
   m_LocalEulerAnglesHint: {x: -79.345, y: -313.778, z: 136.663}
---- !u!114 &1485706757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1485706755}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1485706758}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1485706758
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29709,6 +29762,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13, y: 0.1, z: 0.07}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1485706759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485706755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1485706758}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1923691838}
+  player01CameraSpecial: {fileID: 1923691840}
 --- !u!1 &1500095501
 GameObject:
   m_ObjectHideFlags: 0
@@ -30093,7 +30170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1541444358}
   - component: {fileID: 1541444360}
-  - component: {fileID: 1541444359}
+  - component: {fileID: 1541444361}
   m_Layer: 0
   m_Name: 6RPLPRKLKAttackBox_LK
   m_TagString: Untagged
@@ -30116,30 +30193,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2041727332}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.06}
---- !u!114 &1541444359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1541444357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1541444360}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1541444360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30161,6 +30214,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.017735071, y: 0.006259872, z: 0.011055247}
   m_Center: {x: -0.0019810349, y: 0.0015857465, z: -0.0028249759}
+--- !u!114 &1541444361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541444357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1541444360}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1 &1542426891
 GameObject:
   m_ObjectHideFlags: 0
@@ -30631,7 +30708,7 @@ GameObject:
   - component: {fileID: 1565539474}
   - component: {fileID: 1565539477}
   - component: {fileID: 1565539476}
-  - component: {fileID: 1565539475}
+  - component: {fileID: 1565539478}
   m_Layer: 14
   m_Name: 2SAttackBox
   m_TagString: 2S_AttackBox
@@ -30654,30 +30731,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1012605535}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1565539475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1565539473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1565539476}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 0
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1565539476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30707,6 +30760,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565539473}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1565539478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565539473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1565539476}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 1
+  TakeActionMultiButton: 0
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 1012605538}
+  player01TakeActionMultibutton: {fileID: 0}
+  player01CameraSpecial: {fileID: 1012605542}
 --- !u!1 &1580175956
 GameObject:
   m_ObjectHideFlags: 0
@@ -31108,7 +31185,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1632862114}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 1632862117}
@@ -31121,8 +31198,8 @@ MonoBehaviour:
   animationName: 
   player02Health: {fileID: 0}
   player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1923691838}
+  player01CameraSpecial: {fileID: 1923691840}
 --- !u!1 &1644914507
 GameObject:
   m_ObjectHideFlags: 0
@@ -31734,7 +31811,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1669966961}
   - component: {fileID: 1669966963}
-  - component: {fileID: 1669966962}
+  - component: {fileID: 1669966964}
   m_Layer: 14
   m_Name: 214KAttackBox
   m_TagString: 214K_AttackBox
@@ -31757,30 +31834,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 296936762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -11.241}
---- !u!114 &1669966962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1669966960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1669966963}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 1
-  TakeActionMultiButton: 0
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1669966963
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31802,6 +31855,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.02, y: 0.015665073, z: 0.02}
   m_Center: {x: 1.43950615e-11, y: -0.002167459, z: -1.0484877e-11}
+--- !u!114 &1669966964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669966960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1669966963}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 1
+  TakeActionMultiButton: 0
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 1012605538}
+  player01TakeActionMultibutton: {fileID: 0}
+  player01CameraSpecial: {fileID: 1012605542}
 --- !u!4 &1679077583 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8826081506452349389, guid: 330747d8608b3774c994bdc0fa8dd1b3,
@@ -31974,7 +32051,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1700267038}
   - component: {fileID: 1700267040}
-  - component: {fileID: 1700267039}
+  - component: {fileID: 1700267041}
   m_Layer: 0
   m_Name: 3LPRPAttackBox_RP
   m_TagString: Untagged
@@ -31997,30 +32074,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1500350686}
   m_LocalEulerAnglesHint: {x: -79.345, y: -313.778, z: 136.663}
---- !u!114 &1700267039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1700267037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1700267040}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1700267040
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32042,6 +32095,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13, y: 0.1, z: 0.07}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1700267041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700267037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1700267040}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1923691838}
+  player01CameraSpecial: {fileID: 1923691840}
 --- !u!1 &1701291033
 GameObject:
   m_ObjectHideFlags: 0
@@ -32052,7 +32129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1701291034}
   - component: {fileID: 1701291036}
-  - component: {fileID: 1701291035}
+  - component: {fileID: 1701291037}
   m_Layer: 0
   m_Name: 5RPLPAttackBox_LP
   m_TagString: Untagged
@@ -32075,30 +32152,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1894659874}
   m_LocalEulerAnglesHint: {x: -5.21, y: -16.087, z: -14.148}
---- !u!114 &1701291035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701291033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1701291036}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1701291036
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32120,6 +32173,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1701291037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701291033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1701291036}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1001 &1706445645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32368,7 +32445,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1716119565}
   - component: {fileID: 1716119567}
-  - component: {fileID: 1716119566}
+  - component: {fileID: 1716119568}
   m_Layer: 0
   m_Name: 1RPRKLKAttackBox
   m_TagString: 1RPRKLK_AttackBox
@@ -32391,30 +32468,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1296544313}
   m_LocalEulerAnglesHint: {x: 5.587, y: 0, z: 0}
---- !u!114 &1716119566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1716119564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1716119567}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1716119567
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32436,6 +32489,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.016025072, y: 0.006259872, z: 0.03508094}
   m_Center: {x: -0.0011260272, y: 0.0015857643, z: 0.00979262}
+--- !u!114 &1716119568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716119564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1716119567}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1 &1719144023
 GameObject:
   m_ObjectHideFlags: 0
@@ -34754,7 +34831,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1827483254}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 1827483257}
@@ -34767,8 +34844,8 @@ MonoBehaviour:
   animationName: 
   player02Health: {fileID: 0}
   player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1923691838}
+  player01CameraSpecial: {fileID: 1923691840}
 --- !u!1 &1835467561
 GameObject:
   m_ObjectHideFlags: 0
@@ -35192,7 +35269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1838597839}
   - component: {fileID: 1838597841}
-  - component: {fileID: 1838597840}
+  - component: {fileID: 1838597842}
   m_Layer: 0
   m_Name: 6RPLPAttackBox
   m_TagString: 6LPRP_AttackBox
@@ -35215,30 +35292,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1879662490}
   m_LocalEulerAnglesHint: {x: -192.858, y: -21.533997, z: -0.4550171}
---- !u!114 &1838597840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1838597838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1838597841}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1838597841
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35260,6 +35313,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.65379703, y: 0.63837135, z: 1}
   m_Center: {x: -0.17309915, y: -0.18081488, z: 0.00000068533745}
+--- !u!114 &1838597842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838597838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1838597841}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1001 &1843722775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35346,32 +35423,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 28e06609e400e424288d35e9bd0e4b3d,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.8070972
+      value: 2.8070967
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 28e06609e400e424288d35e9bd0e4b3d,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.8070974
+      value: 2.8070977
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 28e06609e400e424288d35e9bd0e4b3d,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.8070972
+      value: 2.8070967
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 28e06609e400e424288d35e9bd0e4b3d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.13961783
+      value: 0.001579091
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 28e06609e400e424288d35e9bd0e4b3d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.12800467
+      value: -0.15712829
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 28e06609e400e424288d35e9bd0e4b3d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.16278549
+      value: -0.0020237267
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 28e06609e400e424288d35e9bd0e4b3d,
         type: 3}
@@ -36349,7 +36426,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1852005096}
   - component: {fileID: 1852005098}
-  - component: {fileID: 1852005097}
+  - component: {fileID: 1852005099}
   m_Layer: 0
   m_Name: 3RPLPAttackBox
   m_TagString: 3LPRP_AttackBox
@@ -36372,30 +36449,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1879662490}
   m_LocalEulerAnglesHint: {x: -179.581, y: -21.429993, z: -0.44400024}
---- !u!114 &1852005097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852005095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1852005098}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1852005098
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36417,6 +36470,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1852005099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852005095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1852005098}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1 &1858172034
 GameObject:
   m_ObjectHideFlags: 0
@@ -39758,6 +39835,7 @@ MonoBehaviour:
     EnergySlider: {fileID: 211668284}
   activePlayersHealth: []
   gameOverPanel: {fileID: 82790265}
+  paneltowin: {fileID: 1234468013}
   positionPlayer01: {fileID: 647548757}
   positionPlayer02: {fileID: 72203854}
   CounterWinPlayer01: 0
@@ -39772,6 +39850,8 @@ MonoBehaviour:
   - {fileID: 855566246}
   player01Health: {fileID: 0}
   player02Health: {fileID: 0}
+  textInGameOver: {fileID: 1719144025}
+  textWinRound: {fileID: 2136989283}
 --- !u!1 &1937673239
 GameObject:
   m_ObjectHideFlags: 0
@@ -40097,7 +40177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1960552016}
   - component: {fileID: 1960552018}
-  - component: {fileID: 1960552017}
+  - component: {fileID: 1960552019}
   m_Layer: 0
   m_Name: 5RPLPAttackBox_RP
   m_TagString: 5LPRP_AttackBox
@@ -40120,30 +40200,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1879662490}
   m_LocalEulerAnglesHint: {x: -179.581, y: -21.429993, z: -0.44400024}
---- !u!114 &1960552017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960552015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1960552018}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 0
-  TakeActionMultiButton: 1
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1960552018
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40165,6 +40221,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.15493494, z: 1}
   m_Center: {x: 0.0000023565917, y: -0.42253315, z: 0.0000015830143}
+--- !u!114 &1960552019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960552015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1960552018}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 0
+  TakeActionMultiButton: 1
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1546451622}
+  player01CameraSpecial: {fileID: 1546451625}
 --- !u!1 &1963080887 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 28e06609e400e424288d35e9bd0e4b3d,
@@ -40501,7 +40581,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1971708695}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 1971708698}
@@ -40514,8 +40594,8 @@ MonoBehaviour:
   animationName: 
   player02Health: {fileID: 0}
   player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1923691838}
+  player01CameraSpecial: {fileID: 1923691840}
 --- !u!1 &1971954773
 GameObject:
   m_ObjectHideFlags: 0
@@ -40605,7 +40685,7 @@ GameObject:
   - component: {fileID: 1985278471}
   - component: {fileID: 1985278474}
   - component: {fileID: 1985278473}
-  - component: {fileID: 1985278472}
+  - component: {fileID: 1985278475}
   m_Layer: 14
   m_Name: Cube
   m_TagString: 2K_AttackBox
@@ -40628,30 +40708,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1012605534}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1985278472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1985278470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Col: {fileID: 1985278473}
-  damage: 10
-  force: 0
-  Check: 0
-  Grab: 0
-  TakeAction: 1
-  TakeActionMultiButton: 0
-  animationName: 
-  player02Health: {fileID: 0}
-  player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
 --- !u!65 &1985278473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40681,6 +40737,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1985278470}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1985278475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985278470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Col: {fileID: 1985278473}
+  damage: 10
+  force: 0
+  Check: 0
+  Grab: 0
+  TakeAction: 1
+  TakeActionMultiButton: 0
+  animationName: 
+  player02Health: {fileID: 0}
+  player01TakeAction: {fileID: 1012605538}
+  player01TakeActionMultibutton: {fileID: 0}
+  player01CameraSpecial: {fileID: 1012605542}
 --- !u!1 &1987041787
 GameObject:
   m_ObjectHideFlags: 0
@@ -40822,7 +40902,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1993384291}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f35e635ab7feb0b4789dbd1f1d9d2b8c, type: 3}
+  m_Script: {fileID: 11500000, guid: d72feffaf9e030b42bb5b44d3548b527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Col: {fileID: 1993384293}
@@ -40835,8 +40915,8 @@ MonoBehaviour:
   animationName: 
   player02Health: {fileID: 0}
   player01TakeAction: {fileID: 0}
-  player01TakeActionMultibutton: {fileID: 0}
-  player01CameraSpecial: {fileID: 0}
+  player01TakeActionMultibutton: {fileID: 1923691838}
+  player01CameraSpecial: {fileID: 1923691840}
 --- !u!1 &1997141158
 GameObject:
   m_ObjectHideFlags: 0
@@ -41811,6 +41891,140 @@ Transform:
   m_Children: []
   m_Father: {fileID: 127354056}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2136989281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2136989282}
+  - component: {fileID: 2136989284}
+  - component: {fileID: 2136989283}
+  m_Layer: 5
+  m_Name: TextPlayerWin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2136989282
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136989281}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.6275, y: 1.6275, z: 1.6275}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1234468014}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -273, y: 42}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2136989283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136989281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Player 02 Win
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 97.96
+  m_fontSizeBase: 97.96
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -764.3365, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &2136989284
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136989281}
+  m_CullTransparentMesh: 1
 --- !u!1 &2140131742
 GameObject:
   m_ObjectHideFlags: 0

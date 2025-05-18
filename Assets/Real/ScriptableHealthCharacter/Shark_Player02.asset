@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 100
+  specialMoveEnergy: 100
+  currentEnergy: 6.1501517
