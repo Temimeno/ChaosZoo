@@ -21,27 +21,30 @@ public class Player02Health : MonoBehaviour
     public bool KenInAir = false;
     public int currentdamage = 0;
     public float time;
+    public int playerCurrentHealth;
+    public GameManagerHealthSystem gameManagerHealthSystem;
 
 
     void Start()
     {
         anim = transform.parent.GetComponent<Animator>();
         scriptableHealth.currentHealth = scriptableHealth.maxHealth;
+        playerCurrentHealth = scriptableHealth.currentHealth;
         knockout = false;
     }
 
     void Update()
     {
-        if(currentdamage > 1)
+        if (currentdamage > 1)
         {
             time += Time.deltaTime;
-            if(time > 4)
+            if (time > 4)
             {
                 currentdamage = 0;
                 time = 0;
             }
         }
-        if(scriptableHealth.currentHealth <= 0)
+        if (scriptableHealth.currentHealth <= 0)
         {
             player02Movement.isPerformingAction = true;
             player02TakeAction.isPerformingAction = true;
@@ -49,7 +52,8 @@ public class Player02Health : MonoBehaviour
             //anim.SetTrigger("Dead");
             knockout = true;
         }
-
+        
+        playerCurrentHealth = scriptableHealth.currentHealth;
         //HPSliderLink();
     }
 
@@ -158,16 +162,17 @@ public class Player02Health : MonoBehaviour
             else if(actionGrabName == "6LPRPLKRP_Capybara")
             {
                 if(scriptableHealth.currentHealth > 0  && !knockout && !SharkDrive && !KenInAir)
-                {
+                {   
                     scriptableHealth.currentHealth -= damage;
-                    if(scriptableHealth.currentHealth > 0)
+                    if (scriptableHealth.currentHealth > 0)
                     {
                         anim.SetTrigger("Hurt");
                     }
-                    else if(scriptableHealth.currentHealth <= 0)
+                    else if (scriptableHealth.currentHealth <= 0)
                     {
                         anim.SetTrigger("Dead");
                         knockout = true;
+                        gameManagerHealthSystem.CheckHealthBarForWin();
                     }
                     player02Movement.isPerformingAction = true;
                     player02TakeAction.isPerformingAction = true;
@@ -267,9 +272,9 @@ public class Player02Health : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         scriptableHealth.currentHealth -= damage;
         player02EventAnimation.forcehurt = 0;
-        if(scriptableHealth.currentHealth <= 0)
+        if (scriptableHealth.currentHealth <= 0)
         {
-            anim.SetTrigger("DeadKen");
+            //anim.SetTrigger("DeadKen");
             knockout = true;
             player02Movement.isPerformingAction = true;
             player02TakeAction.isPerformingAction = true;

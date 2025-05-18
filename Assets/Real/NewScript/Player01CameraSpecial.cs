@@ -12,6 +12,10 @@ public class Player01CameraSpecial : MonoBehaviour
     public GameObject BlackScene;
     public GameObject BlackScene2;
 
+    public GameObject EnergymoveP1;
+    public GameObject EnergymoveP2;
+    public GameObject CouterWin;
+
     public void CameraSetActive()
     {
         cameraSpecial.SetActive(true);
@@ -23,6 +27,10 @@ public class Player01CameraSpecial : MonoBehaviour
         cameraSpecial.SetActive(true);
         playerHealthBar01.SetActive(false);
         playerHealthBar02.SetActive(false);
+        EnergymoveP1.SetActive(false);
+        EnergymoveP2.SetActive(false);
+        CouterWin.SetActive(false);
+
         BlackScene.SetActive(true);
         BlackScene2.SetActive(true);
         StartCoroutine(ResetCamareGrap());
@@ -38,6 +46,10 @@ public class Player01CameraSpecial : MonoBehaviour
         cameraSpecial.SetActive(true);
         playerHealthBar01.SetActive(false);
         playerHealthBar02.SetActive(false);
+        EnergymoveP1.SetActive(false);
+        EnergymoveP2.SetActive(false);
+        CouterWin.SetActive(false);
+
         StartCoroutine(ResetCapybaraCamera(1f));
     }
 
@@ -46,6 +58,10 @@ public class Player01CameraSpecial : MonoBehaviour
         cameraSpecial.SetActive(true);
         playerHealthBar01.SetActive(false);
         playerHealthBar02.SetActive(false);
+        EnergymoveP1.SetActive(false);
+        EnergymoveP2.SetActive(false);
+        CouterWin.SetActive(false);
+
         StartCoroutine(ResetCapybaraCamera(2f));
     }
     IEnumerator ResetCamareSpecial()
@@ -59,10 +75,14 @@ public class Player01CameraSpecial : MonoBehaviour
     {
         yield return new WaitForSeconds(4f);
         cameraSpecial.SetActive(false);
-         BlackScene.SetActive(false);
+        BlackScene.SetActive(false);
         BlackScene2.SetActive(false);
         playerHealthBar01.SetActive(true);
         playerHealthBar02.SetActive(true);
+
+        EnergymoveP1.SetActive(true);
+        EnergymoveP2.SetActive(true);
+        CouterWin.SetActive(true);
     }
 
     IEnumerator ResetCamareHCB()
@@ -76,6 +96,10 @@ public class Player01CameraSpecial : MonoBehaviour
         yield return new WaitForSeconds(timereset);
         playerHealthBar01.SetActive(true);
         playerHealthBar02.SetActive(true);
+
+        EnergymoveP1.SetActive(true);
+        EnergymoveP2.SetActive(true);
+        CouterWin.SetActive(true);
         cameraSpecial.SetActive(false);
     }
 }

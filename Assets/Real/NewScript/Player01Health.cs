@@ -24,26 +24,28 @@ public class Player01Health : MonoBehaviour
     public bool KenInAir = false;
     public int currentdamage = 0;
     public float time;
+    public int playerCurrentHealth;
 
     void Start()
     {
         anim = transform.parent.GetComponent<Animator>();
         scriptableHealth.currentHealth = scriptableHealth.maxHealth;
+        playerCurrentHealth = scriptableHealth.currentHealth;
         knockout = false;   
     }
 
     void Update()
     {
-        if(currentdamage > 1)
+        if (currentdamage > 1)
         {
             time += Time.deltaTime;
-            if(time > 4)
+            if (time > 4)
             {
                 currentdamage = 0;
                 time = 0;
             }
         }
-        if(scriptableHealth.currentHealth <= 0)
+        if (scriptableHealth.currentHealth <= 0)
         {
             player01Movement.isPerformingAction = true;
             player01TakeAction.isPerformingAction = true;
@@ -51,6 +53,7 @@ public class Player01Health : MonoBehaviour
             knockout = true;
         }
 
+        playerCurrentHealth = scriptableHealth.currentHealth;
         //HPSliderLink();
     }
     public void TakeDamage(int damage, float force, string actionGrapName)

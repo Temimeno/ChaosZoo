@@ -17,7 +17,6 @@ public class GameManagerHealthSystem : MonoBehaviour
 
     public List<PlayerData> players = new List<PlayerData>();
 
-    public List<float> activePlayersHealth = new List<float>();
     public GameObject gameOverPanel;
     public GameObject paneltowin;
     public Transform positionPlayer01;
@@ -40,7 +39,7 @@ public class GameManagerHealthSystem : MonoBehaviour
 
     void Start()
     {
-        activePlayersHealth.Clear();
+        //activePlayersHealth.Clear();
         CounterWinPlayer01 = 0;
         CounterWinPlayer02 = 0;
         hasRoundEnded = false;
@@ -58,7 +57,7 @@ public class GameManagerHealthSystem : MonoBehaviour
                 player.playerHealth.currentEnergy = 0;
                 player.EnergySlider.value = 0;
 
-                activePlayersHealth.Add(player.playerHealth.currentHealth);
+                //activePlayersHealth.Add(player.playerHealth.currentHealth);
             }
         }
 
@@ -72,7 +71,6 @@ public class GameManagerHealthSystem : MonoBehaviour
     {
         UpdateHealthSliders();
         UpdateEnergySliders();
-        UpdateActivePlayersHealth();
         CheckHealthBarForWin();
     }
 
@@ -98,26 +96,15 @@ public class GameManagerHealthSystem : MonoBehaviour
         }
     }
 
-    private void UpdateActivePlayersHealth()
+
+    public void CheckHealthBarForWin()
     {
-        activePlayersHealth.Clear();
-        foreach (var player in players)
-        {
-            if (player.playerObject.activeSelf)
-            {
-                activePlayersHealth.Add(player.playerHealth.currentHealth);
-            }
-        }
-    }
+        if (hasRoundEnded) return;
 
-    private void CheckHealthBarForWin()
-    {
-        if (hasRoundEnded || activePlayersHealth.Count < 2) return;
+        int player1Health = player01Health.playerCurrentHealth;
+        int player2Health = player02Health.playerCurrentHealth;
 
-        float player1Health = activePlayersHealth[0];
-        float player2Health = activePlayersHealth[1];
-
-        if (player1Health > player2Health && player2Health == 0)
+        if (player1Health > player2Health && player2Health <= 0)
         {
             CounterWinPlayer01++;
             hasRoundEnded = true;
@@ -130,7 +117,7 @@ public class GameManagerHealthSystem : MonoBehaviour
             textWinRound.text = "Player 01 win";
             CheckForWinner();
         }
-        else if (player2Health > player1Health && player1Health == 0)
+        else if (player2Health > player1Health && player1Health <= 0)
         {
             CounterWinPlayer02++;
             hasRoundEnded = true;
@@ -140,7 +127,7 @@ public class GameManagerHealthSystem : MonoBehaviour
             {
                 ObjectCouter02[CounterWinPlayer02 - 1].SetActive(true);
             }
-            textWinRound.text = "Player 01 win";
+            textWinRound.text = "Player 02 win";
             CheckForWinner();
         }
     }
@@ -167,7 +154,7 @@ public class GameManagerHealthSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
         paneltowin.SetActive(true);
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         paneltowin.SetActive(false);
 
         // รีเซ็ตตำแหน่ง
@@ -193,11 +180,14 @@ public class GameManagerHealthSystem : MonoBehaviour
             {
                 player.playerHealth.currentHealth = player.playerHealth.maxHealth;
                 player.playerHealth.currentEnergy = 0;
+                player01.gameObject.GetComponentInChildren<Animator>().SetTrigger("recove");
+                player02.gameObject.GetComponentInChildren<Animator>().SetTrigger("recove");
             }
         }
         player01Health.knockout = false;
         player02Health.knockout = false;
 
+        yield return new WaitForSeconds(3f);
         hasRoundEnded = false;
     }
 

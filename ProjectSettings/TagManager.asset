@@ -60,6 +60,8 @@ TagManager:
   - 6RP_AttackBox
   - 1LPRKLK_AttackBox
   - 2P_AttackBox
+  - Left
+  - Right
   layers:
   - Default
   - TransparentFX

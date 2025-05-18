@@ -18,7 +18,7 @@ public class Player01TakeActionMultibutton : MonoBehaviour
     public static bool Hits = false;
     public bool hits => Hits;
     //public int specialMoveEnergy = 100;
-    private float regenRate = 3f;
+    private float regenRate = 5f;
 
 
     private Animator anim;
