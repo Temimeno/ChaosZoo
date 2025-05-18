@@ -124,15 +124,28 @@ public class GameManagerHealthSystem : MonoBehaviour
         player01.transform.position = positionPlayer01.position;
         player02.transform.position = positionPlayer02.position;
 
-        // ✅ รีเซ็ตพลังชีวิตใหม่ (ถ้าต้องการ)
+        foreach (var player in players)
+        {
+            if (player.playerObject.activeSelf && player.playerHealth.currentHealth == 0)
+            {
+                Animator animator = player.playerObject.GetComponentInChildren<Animator>();
+                if (animator != null)
+                {
+                    animator.SetTrigger("recove"); // 🔁 ส่ง trigger ให้ recover
+                }
+            }
+        }
+
+        // รีเซ็ตพลังชีวิต และพลังพิเศษ
         foreach (var player in players)
         {
             if (player.playerObject.activeSelf)
             {
                 player.playerHealth.currentHealth = player.playerHealth.maxHealth;
+                player.playerHealth.currentEnergy = 0;
             }
         }
 
-        hasRoundEnded = false; // ✅ เปิดให้รอบใหม่เริ่มได้
+        hasRoundEnded = false;
     }
 }

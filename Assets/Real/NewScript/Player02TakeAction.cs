@@ -751,7 +751,7 @@ public class Player02TakeAction : MonoBehaviour
             }
             else if (player02Movement.faceLeft)
             {
-                if (Input.GetAxis(horizontalInput) < 0.4f)
+                if (Input.GetAxis(horizontalInput) < -0.4f)
                 {
                     anim.SetTrigger("Special" + actionName + "Trigger");
                 }
