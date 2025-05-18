@@ -12,8 +12,20 @@ EditorBuildSettings:
     path: Assets/Scenes/New/01.unity
     guid: ac023de98b4f07b47a05c0114ab4d79e
   - enabled: 1
+    path: Assets/Scenes/New/VersusCityMap.unity
+    guid: eea9f931bb3e348478d947e502e3ec9d
+  - enabled: 1
+    path: Assets/Scenes/New/VersusFloatingIsland.unity
+    guid: fc2366f8eeeef6145a5e39a1136f1cc0
+  - enabled: 1
     path: Assets/Scenes/New/SelectCharacterInTraningRoom.unity
     guid: e32ac641155026d4981fe9409097bb5a
+  - enabled: 1
+    path: Assets/Scenes/New/SelectCharacterInCityMap.unity
+    guid: e02ec0953407b0048ba0be809e5eafde
+  - enabled: 1
+    path: Assets/Scenes/New/SelectCharacterInFloatingMap.unity
+    guid: 44546a15c97707440b950480b3e53526
   - enabled: 1
     path: Assets/Scenes/New/NewChallange/Challenge_Shark/Challenge_Shark_1.unity
     guid: e7e04c8b68c90434bac21f7c35a05cae

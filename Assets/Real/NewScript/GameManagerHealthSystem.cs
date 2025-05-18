@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class GameManagerHealthSystem : MonoBehaviour
 {
     [System.Serializable]
@@ -34,6 +34,9 @@ public class GameManagerHealthSystem : MonoBehaviour
 
     public TextMeshProUGUI textInGameOver;
     public TextMeshProUGUI textWinRound;
+
+    public string scneToSelectCharacter;
+    public string sceneToMainmenu;
 
     private bool hasRoundEnded = false; // ✅ เพิ่ม flag
 
@@ -206,5 +209,27 @@ public class GameManagerHealthSystem : MonoBehaviour
             Time.timeScale = 0;
             gameOverPanel.SetActive(true);
         }
+    }
+
+    public void GoTomainmenu()
+    {
+        GameObject obj = GameObject.FindGameObjectWithTag("SelectCharacter");
+        if (obj != null)
+        {
+            SelectCharacter selectCharacter = obj.GetComponent<SelectCharacter>();
+            Destroy(obj);
+        }
+        SceneManager.LoadScene(sceneToMainmenu);
+    }
+
+    public void GoToSelect()
+    {
+        GameObject obj = GameObject.FindGameObjectWithTag("SelectCharacter");
+        if (obj != null)
+        {
+            SelectCharacter selectCharacter = obj.GetComponent<SelectCharacter>();
+            Destroy(obj);
+        }
+        SceneManager.LoadScene(scneToSelectCharacter);
     }
 }

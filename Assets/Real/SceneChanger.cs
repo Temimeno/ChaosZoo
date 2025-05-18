@@ -10,6 +10,7 @@ public class SceneChangerButton : MonoBehaviour
     public GameObject selectChallenge;
     public GameObject trainingModeButton;
     public GameObject challengeModeButton;
+    public GameObject VersusButton;
     public GameObject selectChallengeShark;
     public GameObject selectChallengeCapybara;
     public GameObject selectChallengeKen;
@@ -20,10 +21,12 @@ public class SceneChangerButton : MonoBehaviour
     public GameObject cameraCapybaraChallenge;
     public GameObject cameraKenChallenge;
     public GameObject cameraPengangChallenge;
+    public GameObject cameraVersus;
     public GameObject SelectMapShark;
     public GameObject SelectMapCapybara;
     public GameObject SelectMapKen;
     public GameObject SelectMapPengang;
+    public GameObject SelectMapVersus;
 
     void Start()
     {
@@ -38,6 +41,7 @@ public class SceneChangerButton : MonoBehaviour
         selectTrainingRoom.SetActive(true);
         trainingModeButton.SetActive(false);
         challengeModeButton.SetActive(false);
+        VersusButton.SetActive(false);
     }
 
     public void CloseSelectTrainingRoom()
@@ -46,6 +50,7 @@ public class SceneChangerButton : MonoBehaviour
         selectTrainingRoom.SetActive(false);
         trainingModeButton.SetActive(true);
         challengeModeButton.SetActive(true);
+        VersusButton.SetActive(true);
     }
 
     public void SelectChallenge()
@@ -54,6 +59,7 @@ public class SceneChangerButton : MonoBehaviour
         selectChallenge.SetActive(true);
         trainingModeButton.SetActive(false);
         challengeModeButton.SetActive(false);
+        VersusButton.SetActive(false);
     }
 
     public void CloseSelectChallenge()
@@ -62,6 +68,7 @@ public class SceneChangerButton : MonoBehaviour
         selectChallenge.SetActive(false);
         trainingModeButton.SetActive(true);
         challengeModeButton.SetActive(true);
+        VersusButton.SetActive(true);
     }
 
     public void SelectChallengeShark()
@@ -172,6 +179,26 @@ public class SceneChangerButton : MonoBehaviour
         SelectMapCapybara.SetActive(false);
         SelectMapKen.SetActive(false);
         SelectMapPengang.SetActive(false);
+    }
+
+    public void VersusMode()
+    {
+        SelectMapVersus.SetActive(true);
+        cameraVersus.SetActive(true);
+
+        trainingModeButton.SetActive(false);
+        challengeModeButton.SetActive(false);
+        VersusButton.SetActive(false);
+    }
+
+    public void ExitVersusMode()
+    {
+        SelectMapVersus.SetActive(false);
+        cameraVersus.SetActive(false);
+
+        trainingModeButton.SetActive(true);
+        challengeModeButton.SetActive(true);
+        VersusButton.SetActive(true);
     }
 
     public void TrainingRoomShark()
@@ -365,6 +392,21 @@ public class SceneChangerButton : MonoBehaviour
         ClearChallengeData(challengeScriptable[9]);
         ClearChallengeData(challengeScriptable[10]);
         ClearChallengeData(challengeScriptable[11]);
+    }
+
+    public void VersusTrainingRoom()
+    {
+        SceneManager.LoadScene(sceneToLoad[28]);
+    }
+
+    public void VersusCityMap()
+    {
+        SceneManager.LoadScene(sceneToLoad[29]);
+    }
+
+    public void VersusFloatingMap()
+    {
+        SceneManager.LoadScene(sceneToLoad[30]);
     }
 
     private void ClearChallengeData(ChalllengeScripttable challengeData)
