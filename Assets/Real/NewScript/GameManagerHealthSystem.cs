@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManagerHealthSystem : MonoBehaviour
 {
@@ -25,6 +26,13 @@ public class GameManagerHealthSystem : MonoBehaviour
     public GameObject player01;
     public GameObject player02;
 
+    public List<GameObject> ObjectCouter01;
+    public List<GameObject> ObjectCouter02;
+
+    public Player01Health player01Health;
+    public Player02Health player02Health;
+
+    public TextMeshProUGUI textInGameOver;
     private bool hasRoundEnded = false; // ✅ เพิ่ม flag
 
     void Start()
@@ -33,6 +41,8 @@ public class GameManagerHealthSystem : MonoBehaviour
         CounterWinPlayer01 = 0;
         CounterWinPlayer02 = 0;
         hasRoundEnded = false;
+        Time.timeScale = 1;
+        gameOverPanel.SetActive(false);
 
         foreach (var player in players)
         {
@@ -51,6 +61,8 @@ public class GameManagerHealthSystem : MonoBehaviour
 
         player01 = GameObject.FindGameObjectWithTag("Player01");
         player02 = GameObject.FindGameObjectWithTag("Player02");
+        player01Health = GameObject.FindGameObjectWithTag("Player01Health").GetComponent<Player01Health>();
+        player02Health = GameObject.FindGameObjectWithTag("Player02Health").GetComponent<Player02Health>();
     }
 
     void Update()
@@ -97,7 +109,7 @@ public class GameManagerHealthSystem : MonoBehaviour
 
     private void CheckHealthBarForWin()
     {
-        if (hasRoundEnded || activePlayersHealth.Count < 2) return; // ✅ หยุดถ้าเคยจบรอบแล้ว หรือไม่มีผู้เล่นครบ
+        if (hasRoundEnded || activePlayersHealth.Count < 2) return;
 
         float player1Health = activePlayersHealth[0];
         float player2Health = activePlayersHealth[1];
@@ -106,14 +118,45 @@ public class GameManagerHealthSystem : MonoBehaviour
         {
             CounterWinPlayer01++;
             hasRoundEnded = true;
-            StartCoroutine(ResetPositionCharacter());
+
+            // ✅ เปิด Object ตามลำดับของ Player01
+            if (CounterWinPlayer01 - 1 < ObjectCouter01.Count)
+            {
+                ObjectCouter01[CounterWinPlayer01 - 1].SetActive(true);
+            }
+
+            CheckForWinner();
         }
         else if (player2Health > player1Health && player1Health == 0)
         {
             CounterWinPlayer02++;
             hasRoundEnded = true;
+
+            // ✅ เปิด Object ตามลำดับของ Player02
+            if (CounterWinPlayer02 - 1 < ObjectCouter02.Count)
+            {
+                ObjectCouter02[CounterWinPlayer02 - 1].SetActive(true);
+            }
+
+            CheckForWinner();
+        }
+    }
+
+    private void CheckForWinner()
+    {
+        if (CounterWinPlayer01 == 2)
+        {
+            StartCoroutine(WaitForEndgame());
+        }
+        else if (CounterWinPlayer02 == 2)
+        {
+            StartCoroutine(WaitForEndgame());
+        }
+        else
+        {
             StartCoroutine(ResetPositionCharacter());
         }
+
     }
 
     IEnumerator ResetPositionCharacter()
@@ -145,7 +188,26 @@ public class GameManagerHealthSystem : MonoBehaviour
                 player.playerHealth.currentEnergy = 0;
             }
         }
+        player01Health.knockout = false;
+        player02Health.knockout = false;
 
         hasRoundEnded = false;
+    }
+
+    IEnumerator WaitForEndgame()
+    {
+        yield return new WaitForSeconds(1f);
+        if (CounterWinPlayer01 == 2)
+        {
+            textInGameOver.text = "Player 01 Win";
+            Time.timeScale = 0;
+            gameOverPanel.SetActive(true);
+        }
+        else if (CounterWinPlayer02 == 2)
+        {
+            textInGameOver.text = "Player 02 Win";
+            Time.timeScale = 0;
+            gameOverPanel.SetActive(true);
+        }
     }
 }
